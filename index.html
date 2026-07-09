@@ -2340,9 +2340,11 @@ display:none;
 
 justify-content:center;
 
-align-items:center;
+align-items:flex-start;
 
-padding:20px;
+overflow-y:auto;
+
+padding:40px 20px;
 
 z-index:99999;
 
@@ -2363,6 +2365,8 @@ border-radius:22px;
 padding:40px;
 
 position:relative;
+
+margin:40px auto;
 
 box-shadow:0 30px 70px rgba(0,0,0,.45);
 
@@ -3199,6 +3203,9 @@ window.open(
 
 "_blank"
 
+);
+        alert(
+"✅ Your request has been submitted successfully.\n\nYou will receive a personalized financial plan along with a consultation call within 6 hours."
 );
 
 closeForm();
