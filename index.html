@@ -3384,7 +3384,7 @@ transform:translateY(6px);
 
 /* Icon Glow */
 
-.why-card i{
+.why-icon{
 
 position:relative;
 
@@ -3392,7 +3392,7 @@ overflow:hidden;
 
 }
 
-.why-card i::before{
+.why-icon::before{
 
 content:"";
 
@@ -3409,7 +3409,7 @@ height:100%;
 background:linear-gradient(
 90deg,
 transparent,
-rgba(255,255,255,.45),
+rgba(255,255,255,.35),
 transparent
 );
 
@@ -3417,7 +3417,7 @@ transform:skewX(-25deg);
 
 }
 
-.why-card:hover i::before{
+.why-card:hover .why-icon::before{
 
 animation:buttonLight .9s linear;
 
