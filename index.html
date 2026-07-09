@@ -2971,6 +2971,499 @@ transform:translateY(6px);
 }
 
 }
+        /*=====================================================
+            WHY CHOOSE SECTION
+=====================================================*/
+
+.why-section{
+
+padding:40px 5% 70px;
+
+background:var(--bg-main);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/*==============================
+        HEADING
+==============================*/
+
+.why-heading{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+text-align:center;
+
+max-width:900px;
+
+margin:0 auto 60px;
+
+}
+
+.why-heading h2{
+
+font-size:46px;
+
+margin:18px 0;
+
+line-height:1.25;
+
+color:#ffffff;
+
+position:relative;
+
+display:inline-block;
+
+}
+
+.why-heading h2::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+bottom:-14px;
+
+transform:translateX(-50%);
+
+width:95px;
+
+height:4px;
+
+border-radius:10px;
+
+background:linear-gradient(
+90deg,
+#D62D2D,
+#F4B400
+);
+
+}
+
+.why-heading p{
+
+font-size:17px;
+
+line-height:1.8;
+
+color:#D7E2F2;
+
+}
+
+/*==============================
+            GRID
+==============================*/
+
+.why-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+}
+
+/*==============================
+            CARD
+==============================*/
+
+.why-card{
+
+background:#0B1F39;
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:22px;
+
+padding:35px 28px;
+
+text-align:center;
+
+position:relative;
+
+overflow:hidden;
+
+transition:.45s;
+
+box-shadow:0 18px 45px rgba(0,0,0,.30);
+
+}
+
+.why-card::before{
+
+content:"";
+
+position:absolute;
+
+left:-100%;
+
+top:0;
+
+width:60%;
+
+height:3px;
+
+background:linear-gradient(
+90deg,
+transparent,
+#F4B400,
+transparent
+);
+
+animation:cardLight 5s linear infinite;
+
+}
+
+.why-card:hover{
+
+transform:translateY(-12px);
+
+border-color:rgba(244,180,0,.30);
+
+box-shadow:
+
+0 28px 60px rgba(0,0,0,.45),
+
+0 0 18px rgba(244,180,0,.15);
+
+}
+
+/*==============================
+            ICON
+==============================*/
+
+.why-card i{
+
+width:82px;
+
+height:82px;
+
+margin:0 auto 24px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+border-radius:50%;
+
+font-size:34px;
+
+background:linear-gradient(
+135deg,
+#D62D2D,
+#F4B400
+);
+
+color:#ffffff;
+
+box-shadow:
+
+0 12px 30px rgba(214,45,45,.25);
+
+transition:.4s;
+
+}
+
+.why-card:hover i{
+
+transform:rotate(-8deg) scale(1.08);
+
+}
+
+/*==============================
+            TEXT
+==============================*/
+
+.why-card h3{
+
+font-size:25px;
+
+margin-bottom:15px;
+
+color:#ffffff;
+
+transition:.35s;
+
+}
+
+.why-card:hover h3{
+
+color:#F4B400;
+
+}
+
+.why-card p{
+
+font-size:15px;
+
+line-height:1.8;
+
+color:#D7E2F2;
+
+transition:.35s;
+
+}
+
+.why-card:hover p{
+
+color:#ffffff;
+
+}
+
+/*==============================
+        BACKGROUND GLOW
+==============================*/
+
+.why-section::before{
+
+content:"";
+
+position:absolute;
+
+left:-220px;
+
+top:-160px;
+
+width:520px;
+
+height:520px;
+
+background:radial-gradient(
+
+circle,
+
+rgba(244,180,0,.07),
+
+transparent 70%
+
+);
+
+animation:serviceGlow1 10s ease-in-out infinite;
+
+pointer-events:none;
+
+}
+
+.why-section::after{
+
+content:"";
+
+position:absolute;
+
+right:-180px;
+
+bottom:-120px;
+
+width:420px;
+
+height:420px;
+
+background:radial-gradient(
+
+circle,
+
+rgba(214,45,45,.08),
+
+transparent 70%
+
+);
+
+animation:serviceGlow2 10s ease-in-out infinite;
+
+pointer-events:none;
+
+}
+        /*=====================================================
+        WHY CHOOSE PREMIUM EFFECTS
+=====================================================*/
+
+/* Premium Shine Effect */
+
+.why-card::after{
+
+content:"";
+
+position:absolute;
+
+left:-120%;
+
+top:0;
+
+width:60%;
+
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.15),
+transparent
+);
+
+transform:skewX(-25deg);
+
+}
+
+.why-card:hover::after{
+
+animation:whyShine .9s linear;
+
+}
+
+@keyframes whyShine{
+
+0%{
+
+left:-120%;
+
+}
+
+100%{
+
+left:170%;
+
+}
+
+}
+
+/* Floating Card Animation */
+
+.why-card:nth-child(odd){
+
+animation:whyFloat1 6s ease-in-out infinite;
+
+}
+
+.why-card:nth-child(even){
+
+animation:whyFloat2 7s ease-in-out infinite;
+
+}
+
+@keyframes whyFloat1{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-6px);
+
+}
+
+}
+
+@keyframes whyFloat2{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(6px);
+
+}
+
+}
+
+/* Icon Glow */
+
+.why-card i{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.why-card i::before{
+
+content:"";
+
+position:absolute;
+
+left:-120%;
+
+top:0;
+
+width:60%;
+
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.45),
+transparent
+);
+
+transform:skewX(-25deg);
+
+}
+
+.why-card:hover i::before{
+
+animation:buttonLight .9s linear;
+
+}
+
+/* Better Hover */
+
+.why-card{
+
+cursor:default;
+
+}
+
+.why-card:hover{
+
+transform:translateY(-12px) scale(1.02);
+
+}
+
+/* Better Text */
+
+.why-card h3{
+
+transition:.35s;
+
+}
+
+.why-card:hover h3{
+
+letter-spacing:.3px;
+
+}
+
+.why-card p{
+
+transition:.35s;
+
+}
+
+.why-card:hover p{
+
+color:#ffffff;
+
+}
 
 /*=====================================================
         PREMIUM TEXT SELECTION
@@ -3799,6 +4292,134 @@ alt="WhatsApp">
                 Working Professional
 
             </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="section-divider"></div>
+            <!--====================================================
+            WHY CHOOSE SOUMYAKANTA
+=====================================================-->
+
+<section id="why-choose" class="why-section">
+
+    <div class="why-heading">
+
+        <span class="section-tag">
+
+            WHY CHOOSE ME
+
+        </span>
+
+        <h2>
+
+            Why Choose
+            Soumyakanta Sahoo
+
+        </h2>
+
+        <p>
+
+            I believe financial planning should be simple, transparent,
+            and personalized. My goal is to help every client make
+            confident financial decisions for a secure future.
+
+        </p>
+
+    </div>
+
+    <div class="why-grid">
+
+        <div class="why-card">
+
+            <i class="fa-solid fa-user-check"></i>
+
+            <h3>Personalized Guidance</h3>
+
+            <p>
+
+                Every recommendation is tailored to your financial goals
+                and future aspirations.
+
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <i class="fa-solid fa-bullseye"></i>
+
+            <h3>Goal-Based Planning</h3>
+
+            <p>
+
+                Investment and protection strategies designed around your
+                life goals.
+
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <h3>Trusted Protection</h3>
+
+            <p>
+
+                Comprehensive insurance solutions for your family and
+                financial security.
+
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <h3>Long-Term Wealth</h3>
+
+            <p>
+
+                Focused on sustainable wealth creation with disciplined
+                financial planning.
+
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <i class="fa-solid fa-comments"></i>
+
+            <h3>Dedicated Support</h3>
+
+            <p>
+
+                Quick responses and continuous support whenever you need
+                financial guidance.
+
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <i class="fa-solid fa-handshake"></i>
+
+            <h3>Transparent Advice</h3>
+
+            <p>
+
+                Honest recommendations with complete clarity and no
+                unnecessary complexity.
+
+            </p>
 
         </div>
 
