@@ -20,7 +20,7 @@
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -3462,6 +3462,510 @@ transition:.35s;
 color:#ffffff;
 
 }
+        /*=====================================================
+        BRANCH LEADERSHIP SECTION
+=====================================================*/
+
+.bm-section{
+
+padding:40px 5% 70px;
+
+background:var(--bg-main);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/*==============================
+        HEADING
+==============================*/
+
+.bm-heading{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+text-align:center;
+
+max-width:900px;
+
+margin:0 auto 60px;
+
+}
+
+.bm-heading h2{
+
+font-size:46px;
+
+color:#ffffff;
+
+margin:18px 0;
+
+line-height:1.25;
+
+position:relative;
+
+display:inline-block;
+
+}
+
+.bm-heading h2::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+bottom:-14px;
+
+transform:translateX(-50%);
+
+width:95px;
+
+height:4px;
+
+border-radius:10px;
+
+background:linear-gradient(
+90deg,
+#D62D2D,
+#F4B400
+);
+
+}
+
+.bm-heading p{
+
+font-size:17px;
+
+line-height:1.8;
+
+color:#D7E2F2;
+
+}
+
+/*==============================
+        LAYOUT
+==============================*/
+
+.bm-container{
+
+display:grid;
+
+grid-template-columns:380px 1fr;
+
+gap:45px;
+
+align-items:center;
+
+}
+
+/*==============================
+        IMAGE
+==============================*/
+
+.bm-image{
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.bm-image img{
+
+width:100%;
+
+max-width:360px;
+
+border-radius:24px;
+
+border:4px solid rgba(244,180,0,.15);
+
+box-shadow:
+
+0 25px 55px rgba(0,0,0,.40);
+
+transition:.45s;
+
+}
+
+.bm-image:hover img{
+
+transform:translateY(-8px) scale(1.02);
+
+}
+
+/*==============================
+        MESSAGE BOX
+==============================*/
+
+.bm-box{
+
+padding:45px;
+
+background:#0B1F39;
+
+border-radius:24px;
+
+border:1px solid rgba(255,255,255,.08);
+
+box-shadow:0 22px 55px rgba(0,0,0,.35);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.bm-quote{
+
+width:78px;
+
+height:78px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:linear-gradient(
+135deg,
+#D62D2D,
+#F4B400
+);
+
+margin-bottom:28px;
+
+}
+
+.bm-quote i{
+
+font-size:32px;
+
+color:#ffffff;
+
+}
+
+.bm-box p{
+
+font-size:16px;
+
+line-height:1.9;
+
+margin-bottom:22px;
+
+color:#D7E2F2;
+
+}
+
+.bm-box strong{
+
+color:#F4B400;
+
+}
+
+/*==============================
+        SIGNATURE AREA
+==============================*/
+
+.bm-signature{
+
+margin-top:30px;
+
+margin-bottom:10px;
+
+}
+
+.bm-box h4{
+
+font-size:26px;
+
+margin-bottom:8px;
+
+color:#ffffff;
+
+}
+
+.bm-box span{
+
+display:block;
+
+font-size:15px;
+
+color:#F4B400;
+
+font-weight:600;
+
+}
+
+/*==============================
+        BACKGROUND GLOW
+==============================*/
+
+.bm-section::before{
+
+content:"";
+
+position:absolute;
+
+left:-220px;
+
+top:-180px;
+
+width:520px;
+
+height:520px;
+
+background:radial-gradient(
+
+circle,
+
+rgba(244,180,0,.07),
+
+transparent 70%
+
+);
+
+animation:serviceGlow1 10s ease-in-out infinite;
+
+pointer-events:none;
+
+}
+
+.bm-section::after{
+
+content:"";
+
+position:absolute;
+
+right:-180px;
+
+bottom:-120px;
+
+width:420px;
+
+height:420px;
+
+background:radial-gradient(
+
+circle,
+
+rgba(214,45,45,.08),
+
+transparent 70%
+
+);
+
+animation:serviceGlow2 10s ease-in-out infinite;
+
+pointer-events:none;
+
+}
+        /*=====================================================
+        BRANCH LEADERSHIP PREMIUM EFFECTS
+=====================================================*/
+
+/* Premium Card Shine */
+
+.bm-box::after{
+
+content:"";
+
+position:absolute;
+
+left:-120%;
+
+top:0;
+
+width:60%;
+
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.12),
+transparent
+);
+
+transform:skewX(-25deg);
+
+}
+
+.bm-box:hover::after{
+
+animation:bmShine .9s linear;
+
+}
+
+@keyframes bmShine{
+
+0%{
+
+left:-120%;
+
+}
+
+100%{
+
+left:170%;
+
+}
+
+}
+
+/* Photo Hover */
+
+.bm-image img{
+
+transition:.45s;
+
+}
+
+.bm-image:hover img{
+
+transform:translateY(-8px) scale(1.03);
+
+box-shadow:
+
+0 30px 60px rgba(0,0,0,.45),
+
+0 0 18px rgba(244,180,0,.18);
+
+}
+
+/* Quote Animation */
+
+.bm-quote{
+
+transition:.45s;
+
+}
+
+.bm-box:hover .bm-quote{
+
+transform:rotate(-12deg) scale(1.08);
+
+}
+
+/*==============================
+    GOLD HANDWRITTEN SIGNATURE
+==============================*/
+
+.bm-signature{
+
+font-family:'Great Vibes',cursive;
+
+font-size:52px;
+
+font-weight:400;
+
+line-height:1;
+
+margin-top:30px;
+
+margin-bottom:12px;
+
+display:inline-block;
+
+background:linear-gradient(
+90deg,
+#F4B400,
+#FFE27A,
+#F4B400
+);
+
+background-size:200%;
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+animation:goldSignature 5s linear infinite;
+
+text-shadow:
+
+0 0 10px rgba(244,180,0,.25);
+
+}
+
+@keyframes goldSignature{
+
+0%{
+
+background-position:0%;
+
+}
+
+100%{
+
+background-position:200%;
+
+}
+
+}
+
+/* Name */
+
+.bm-box h4{
+
+transition:.35s;
+
+}
+
+.bm-box:hover h4{
+
+color:#F4B400;
+
+}
+
+/* Paragraph */
+
+.bm-box p{
+
+transition:.35s;
+
+}
+
+.bm-box:hover p{
+
+color:#ffffff;
+
+}
+
+/* Floating Animation */
+
+.bm-box{
+
+animation:bmFloat 7s ease-in-out infinite;
+
+}
+
+@keyframes bmFloat{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-6px);
+
+}
+
+}
 
 /*=====================================================
         PREMIUM TEXT SELECTION
@@ -4487,6 +4991,297 @@ alt="WhatsApp">
 </section>
 
 <div class="section-divider"></div>
+            <!--====================================================
+        A WORD FROM OUR BRANCH LEADERSHIP
+=====================================================-->
+
+<section id="branch-message" class="bm-section">
+
+    <div class="bm-heading">
+
+        <span class="section-tag">
+
+            BRANCH LEADERSHIP
+
+        </span>
+
+        <h2>
+
+            A Word from
+            Our Branch Leadership
+
+        </h2>
+
+        <p>
+
+            At Aditya Birla Sun Life Insurance, our mission is to empower
+            every advisor to build lasting relationships through trust,
+            integrity and customer-first financial guidance.
+
+        </p>
+
+    </div>
+
+    <div class="bm-container">
+
+        <!-- LEFT SIDE -->
+
+        <div class="bm-image">
+
+            <img src="bm.png"
+                 alt="Branch Leadership">
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="bm-box">
+
+            <div class="bm-quote">
+
+                <i class="fa-solid fa-quote-left"></i>
+
+            </div>
+
+            <p>
+
+                Every financial journey is unique, and every client
+                deserves honest guidance and long-term support.
+                Our commitment is to help families make informed
+                financial decisions with confidence while building
+                relationships based on trust and transparency.
+
+            </p>
+
+            <p>
+
+                We are proud to have dedicated advisors like
+                <strong>Soumyakanta Sahoo</strong>, who consistently
+                place clients' interests first and strive to deliver
+                exceptional service with professionalism and care.
+
+            </p>
+
+            <div class="bm-signature">
+
+                Soumyakanta Sahoo
+
+            </div>
+
+            <h4>
+
+                Financial Advisor
+
+            </h4>
+
+            <span>
+
+                Aditya Birla Sun Life Insurance
+
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="section-divider"></div>
+            /*=====================================================
+        BRANCH LEADERSHIP PREMIUM EFFECTS
+=====================================================*/
+
+/* Premium Card Shine */
+
+.bm-box::after{
+
+content:"";
+
+position:absolute;
+
+left:-120%;
+
+top:0;
+
+width:60%;
+
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.12),
+transparent
+);
+
+transform:skewX(-25deg);
+
+}
+
+.bm-box:hover::after{
+
+animation:bmShine .9s linear;
+
+}
+
+@keyframes bmShine{
+
+0%{
+
+left:-120%;
+
+}
+
+100%{
+
+left:170%;
+
+}
+
+}
+
+/* Photo Hover */
+
+.bm-image img{
+
+transition:.45s;
+
+}
+
+.bm-image:hover img{
+
+transform:translateY(-8px) scale(1.03);
+
+box-shadow:
+
+0 30px 60px rgba(0,0,0,.45),
+
+0 0 18px rgba(244,180,0,.18);
+
+}
+
+/* Quote Animation */
+
+.bm-quote{
+
+transition:.45s;
+
+}
+
+.bm-box:hover .bm-quote{
+
+transform:rotate(-12deg) scale(1.08);
+
+}
+
+/*==============================
+    GOLD HANDWRITTEN SIGNATURE
+==============================*/
+
+.bm-signature{
+
+font-family:'Great Vibes',cursive;
+
+font-size:52px;
+
+font-weight:400;
+
+line-height:1;
+
+margin-top:30px;
+
+margin-bottom:12px;
+
+display:inline-block;
+
+background:linear-gradient(
+90deg,
+#F4B400,
+#FFE27A,
+#F4B400
+);
+
+background-size:200%;
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+animation:goldSignature 5s linear infinite;
+
+text-shadow:
+
+0 0 10px rgba(244,180,0,.25);
+
+}
+
+@keyframes goldSignature{
+
+0%{
+
+background-position:0%;
+
+}
+
+100%{
+
+background-position:200%;
+
+}
+
+}
+
+/* Name */
+
+.bm-box h4{
+
+transition:.35s;
+
+}
+
+.bm-box:hover h4{
+
+color:#F4B400;
+
+}
+
+/* Paragraph */
+
+.bm-box p{
+
+transition:.35s;
+
+}
+
+.bm-box:hover p{
+
+color:#ffffff;
+
+}
+
+/* Floating Animation */
+
+.bm-box{
+
+animation:bmFloat 7s ease-in-out infinite;
+
+}
+
+@keyframes bmFloat{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-6px);
+
+}
+
+}
             <!--====================================================
                 SERVICE POPUP
 =====================================================-->
