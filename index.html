@@ -1603,6 +1603,106 @@ width:20px;
 color:#F4B400;
 
 }
+        /*=====================================================
+            ADVISOR STATS
+=====================================================*/
+
+.advisor-stats{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:22px;
+
+margin-top:40px;
+
+}
+
+.stat-card{
+
+background:#0B1F39;
+
+border-radius:18px;
+
+padding:24px;
+
+text-align:center;
+
+border:1px solid rgba(255,255,255,.06);
+
+transition:.4s;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.stat-card::before{
+
+content:"";
+
+position:absolute;
+
+left:-100%;
+
+top:0;
+
+width:55%;
+
+height:2px;
+
+background:linear-gradient(
+90deg,
+transparent,
+#F4B400,
+transparent
+);
+
+animation:cardLight 5s linear infinite;
+
+}
+
+.stat-card:hover{
+
+transform:translateY(-8px);
+
+border-color:rgba(244,180,0,.25);
+
+box-shadow:0 18px 40px rgba(0,0,0,.35);
+
+}
+
+.stat-card i{
+
+font-size:34px;
+
+color:#F4B400;
+
+margin-bottom:15px;
+
+}
+
+.stat-card h3{
+
+font-size:22px;
+
+margin-bottom:8px;
+
+color:#ffffff;
+
+}
+
+.stat-card span{
+
+color:#d7e2f2;
+
+font-size:15px;
+
+display:block;
+
+}
 
 /*=====================================================
         PREMIUM TEXT SELECTION
@@ -1839,6 +1939,53 @@ alt="WhatsApp">
                     <i class="fa-solid fa-chart-line"></i>
 
                     <div>
+                            <!--=========================
+      TRUST HIGHLIGHTS
+==========================-->
+
+<div class="advisor-stats">
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-user-group"></i>
+
+        <h3>Personalized</h3>
+
+        <span>Financial Guidance</span>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-chart-pie"></i>
+
+        <h3>Goal Based</h3>
+
+        <span>Investment Planning</span>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-handshake"></i>
+
+        <h3>Trusted</h3>
+
+        <span>Long-Term Relationship</span>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-headset"></i>
+
+        <h3>Dedicated</h3>
+
+        <span>Customer Support</span>
+
+    </div>
+
+</div>
 
                         <h4>Wealth Creation</h4>
 
@@ -1923,7 +2070,7 @@ alt="WhatsApp">
 
                     <i class="fa-solid fa-location-dot"></i>
 
-                    Bhubaneswar, Odisha
+                    Uttara, Odisha
 
                 </p>
 
