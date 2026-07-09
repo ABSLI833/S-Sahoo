@@ -3556,11 +3556,9 @@ color:#D7E2F2;
 
 .bm-container{
 
-display:grid;
+grid-template-columns:460px 1fr;
 
-grid-template-columns:380px 1fr;
-
-gap:45px;
+gap:60px;
 
 align-items:center;
 
@@ -3582,17 +3580,13 @@ justify-content:center;
 
 width:100%;
 
-max-width:360px;
+max-width:440px;
+
+height:560px;
+
+object-fit:cover;
 
 border-radius:24px;
-
-border:4px solid rgba(244,180,0,.15);
-
-box-shadow:
-
-0 25px 55px rgba(0,0,0,.40);
-
-transition:.45s;
 
 }
 
@@ -3866,104 +3860,38 @@ transform:rotate(-12deg) scale(1.08);
 
 font-family:'Great Vibes',cursive;
 
-font-size:52px;
+font-size:72px;
 
 font-weight:400;
 
 line-height:1;
 
+display:inline-block;
+
 margin-top:30px;
 
-margin-bottom:12px;
+margin-bottom:18px;
 
-display:inline-block;
+letter-spacing:2px;
 
 background:linear-gradient(
 90deg,
+#FFD54A,
+#FFF4B0,
 #F4B400,
-#FFE27A,
-#F4B400
+#FFE27A
 );
 
-background-size:200%;
+background-size:300%;
 
 -webkit-background-clip:text;
 
 -webkit-text-fill-color:transparent;
 
-animation:goldSignature 5s linear infinite;
+animation:goldSignature 6s linear infinite;
 
 text-shadow:
-
-0 0 10px rgba(244,180,0,.25);
-
-}
-
-@keyframes goldSignature{
-
-0%{
-
-background-position:0%;
-
-}
-
-100%{
-
-background-position:200%;
-
-}
-
-}
-
-/* Name */
-
-.bm-box h4{
-
-transition:.35s;
-
-}
-
-.bm-box:hover h4{
-
-color:#F4B400;
-
-}
-
-/* Paragraph */
-
-.bm-box p{
-
-transition:.35s;
-
-}
-
-.bm-box:hover p{
-
-color:#ffffff;
-
-}
-
-/* Floating Animation */
-
-.bm-box{
-
-animation:bmFloat 7s ease-in-out infinite;
-
-}
-
-@keyframes bmFloat{
-
-0%,100%{
-
-transform:translateY(0);
-
-}
-
-50%{
-
-transform:translateY(-6px);
-
-}
+0 0 18px rgba(244,180,0,.35);
 
 }
 
@@ -5064,7 +4992,7 @@ alt="WhatsApp">
 
             <div class="bm-signature">
 
-                Soumyakanta Sahoo
+                Extraordinary
 
             </div>
 
@@ -5087,201 +5015,7 @@ alt="WhatsApp">
 </section>
 
 <div class="section-divider"></div>
-            /*=====================================================
-        BRANCH LEADERSHIP PREMIUM EFFECTS
-=====================================================*/
 
-/* Premium Card Shine */
-
-.bm-box::after{
-
-content:"";
-
-position:absolute;
-
-left:-120%;
-
-top:0;
-
-width:60%;
-
-height:100%;
-
-background:linear-gradient(
-90deg,
-transparent,
-rgba(255,255,255,.12),
-transparent
-);
-
-transform:skewX(-25deg);
-
-}
-
-.bm-box:hover::after{
-
-animation:bmShine .9s linear;
-
-}
-
-@keyframes bmShine{
-
-0%{
-
-left:-120%;
-
-}
-
-100%{
-
-left:170%;
-
-}
-
-}
-
-/* Photo Hover */
-
-.bm-image img{
-
-transition:.45s;
-
-}
-
-.bm-image:hover img{
-
-transform:translateY(-8px) scale(1.03);
-
-box-shadow:
-
-0 30px 60px rgba(0,0,0,.45),
-
-0 0 18px rgba(244,180,0,.18);
-
-}
-
-/* Quote Animation */
-
-.bm-quote{
-
-transition:.45s;
-
-}
-
-.bm-box:hover .bm-quote{
-
-transform:rotate(-12deg) scale(1.08);
-
-}
-
-/*==============================
-    GOLD HANDWRITTEN SIGNATURE
-==============================*/
-
-.bm-signature{
-
-font-family:'Great Vibes',cursive;
-
-font-size:52px;
-
-font-weight:400;
-
-line-height:1;
-
-margin-top:30px;
-
-margin-bottom:12px;
-
-display:inline-block;
-
-background:linear-gradient(
-90deg,
-#F4B400,
-#FFE27A,
-#F4B400
-);
-
-background-size:200%;
-
--webkit-background-clip:text;
-
--webkit-text-fill-color:transparent;
-
-animation:goldSignature 5s linear infinite;
-
-text-shadow:
-
-0 0 10px rgba(244,180,0,.25);
-
-}
-
-@keyframes goldSignature{
-
-0%{
-
-background-position:0%;
-
-}
-
-100%{
-
-background-position:200%;
-
-}
-
-}
-
-/* Name */
-
-.bm-box h4{
-
-transition:.35s;
-
-}
-
-.bm-box:hover h4{
-
-color:#F4B400;
-
-}
-
-/* Paragraph */
-
-.bm-box p{
-
-transition:.35s;
-
-}
-
-.bm-box:hover p{
-
-color:#ffffff;
-
-}
-
-/* Floating Animation */
-
-.bm-box{
-
-animation:bmFloat 7s ease-in-out infinite;
-
-}
-
-@keyframes bmFloat{
-
-0%,100%{
-
-transform:translateY(0);
-
-}
-
-50%{
-
-transform:translateY(-6px);
-
-}
-
-}
             <!--====================================================
                 SERVICE POPUP
 =====================================================-->
