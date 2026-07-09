@@ -2114,6 +2114,215 @@ background:linear-gradient(
 
 }
         /*=====================================================
+        SERVICES PREMIUM POLISH
+=====================================================*/
+
+/* Floating Background Glow */
+
+.services-section::before{
+
+content:"";
+
+position:absolute;
+
+width:550px;
+
+height:550px;
+
+left:-220px;
+
+top:-180px;
+
+background:radial-gradient(
+circle,
+rgba(244,180,0,.07),
+transparent 70%
+);
+
+pointer-events:none;
+
+animation:serviceGlow1 10s ease-in-out infinite;
+
+}
+
+.services-section::after{
+
+content:"";
+
+position:absolute;
+
+width:450px;
+
+height:450px;
+
+right:-180px;
+
+bottom:-120px;
+
+background:radial-gradient(
+circle,
+rgba(214,45,45,.08),
+transparent 70%
+);
+
+pointer-events:none;
+
+animation:serviceGlow2 9s ease-in-out infinite;
+
+}
+
+@keyframes serviceGlow1{
+
+0%,100%{
+
+transform:scale(1);
+
+opacity:.45;
+
+}
+
+50%{
+
+transform:scale(1.15);
+
+opacity:.8;
+
+}
+
+}
+
+@keyframes serviceGlow2{
+
+0%,100%{
+
+transform:scale(1);
+
+opacity:.4;
+
+}
+
+50%{
+
+transform:scale(.9);
+
+opacity:.75;
+
+}
+
+}
+
+/* Premium Card Border */
+
+.service-card{
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+/* Bottom Animated Border */
+
+.service-card .bottom-line{
+
+position:absolute;
+
+left:0;
+
+bottom:0;
+
+width:100%;
+
+height:3px;
+
+background:linear-gradient(
+90deg,
+#D62D2D,
+#F4B400,
+#D62D2D
+);
+
+background-size:200%;
+
+animation:dividerFlow 5s linear infinite;
+
+}
+
+/* Heading Hover */
+
+.service-card h3{
+
+transition:.35s;
+
+}
+
+.service-card:hover h3{
+
+color:#F4B400;
+
+}
+
+/* Paragraph */
+
+.service-card p{
+
+transition:.35s;
+
+}
+
+.service-card:hover p{
+
+color:#ffffff;
+
+}
+
+/* Icon Glow */
+
+.service-icon{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.service-icon::before{
+
+content:"";
+
+position:absolute;
+
+left:-120%;
+
+top:0;
+
+width:60%;
+
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.45),
+transparent
+);
+
+transform:skewX(-25deg);
+
+}
+
+.service-card:hover .service-icon::before{
+
+animation:buttonLight .9s linear;
+
+}
+
+/* Mouse Pointer */
+
+.service-card{
+
+cursor:pointer;
+
+}
+        /*=====================================================
                 PREMIUM POPUP
 =====================================================*/
 
@@ -2675,6 +2884,7 @@ alt="WhatsApp">
                 Know Details
 
             </button>
+                <div class="bottom-line"></div>
 
         </div>
 
@@ -2707,6 +2917,7 @@ alt="WhatsApp">
                 Know Details
 
             </button>
+                <div class="bottom-line"></div>
 
         </div>
 
@@ -2739,6 +2950,7 @@ alt="WhatsApp">
                 Know Details
 
             </button>
+                <div class="bottom-line"></div>
 
         </div>
 
@@ -2771,6 +2983,7 @@ alt="WhatsApp">
                 Know Details
 
             </button>
+                <div class="bottom-line"></div>
 
         </div>
 
@@ -2803,6 +3016,7 @@ alt="WhatsApp">
                 Know Details
 
             </button>
+                <div class="bottom-line"></div>
 
         </div>
 
@@ -2835,6 +3049,7 @@ alt="WhatsApp">
                 Know Details
 
             </button>
+                <div class="bottom-line"></div>
 
         </div>
 
@@ -2915,4 +3130,78 @@ alt="WhatsApp">
     </div>
 
 </div>
+            <script>
+                    let selectedService="";
+
+function openForm(service){
+
+selectedService=service;
+
+document.getElementById("popupForm").style.display="flex";
+
+}
+
+function closeForm(){
+
+document.getElementById("popupForm").style.display="none";
+
+}
+
+function sendWhatsApp(){
+
+let name=document.getElementById("name").value.trim();
+
+let phone=document.getElementById("phone").value.trim();
+
+let age=document.getElementById("age").value.trim();
+
+let occupation=document.getElementById("occupation").value.trim();
+
+let income=document.getElementById("income").value.trim();
+
+let city=document.getElementById("city").value.trim();
+
+let message=document.getElementById("message").value.trim();
+
+if(name===""||phone===""){
+
+alert("Please enter your Name and Mobile Number.");
+
+return;
+
+}
+
+let text=
+
+`📋 *New Financial Consultation Request*
+
+👤 Name: ${name}
+
+📱 Mobile: ${phone}
+
+🎂 Age: ${age}
+
+💼 Occupation: ${occupation}
+
+💰 Monthly Income: ${income}
+
+📍 City: ${city}
+
+📌 Interested Service:
+${selectedService}
+
+📝 Requirement:
+${message}`;
+
+window.open(
+
+`https://wa.me/917008450300?text=${encodeURIComponent(text)}`,
+
+"_blank"
+
+);
+
+closeForm();
+
+}
     
