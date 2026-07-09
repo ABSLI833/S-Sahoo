@@ -3556,6 +3556,8 @@ color:#D7E2F2;
 
 .bm-container{
 
+display:grid;
+
 grid-template-columns:460px 1fr;
 
 gap:60px;
@@ -3579,12 +3581,18 @@ justify-content:center;
 .bm-image img{
 
 width:100%;
-max-width:400px;
-height:500px;
+max-width:420px;
+height:620px;
 object-fit:cover;
+border-radius:24px;
 display:block;
 margin:auto;
-border-radius:24px;
+
+}
+        .bm-image,
+.bm-box{
+
+align-self:start;
 
 }
 
