@@ -1280,6 +1280,329 @@ background:linear-gradient(
 );
 
 }
+        /*=====================================================
+                ABOUT SECTION
+=====================================================*/
+
+.about-section{
+
+padding:90px 5%;
+
+background:var(--bg-main);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.about-container{
+
+display:grid;
+
+grid-template-columns:1.4fr .8fr;
+
+gap:60px;
+
+align-items:center;
+
+}
+
+/*==============================
+        LEFT CONTENT
+==============================*/
+
+.section-tag{
+
+display:inline-block;
+
+padding:8px 18px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.06);
+
+border:1px solid rgba(244,180,0,.30);
+
+color:#F4B400;
+
+font-size:13px;
+
+font-weight:600;
+
+letter-spacing:1px;
+
+margin-bottom:18px;
+
+}
+
+.about-content h2{
+
+font-size:46px;
+
+line-height:1.2;
+
+margin-bottom:20px;
+
+color:#fff;
+
+}
+
+.about-intro{
+
+font-size:18px;
+
+margin-bottom:22px;
+
+color:#dbe7f8;
+
+}
+
+.about-content p{
+
+font-size:16px;
+
+line-height:1.9;
+
+color:#cfd9ea;
+
+margin-bottom:18px;
+
+}
+
+/*==============================
+        HIGHLIGHTS
+==============================*/
+
+.about-highlights{
+
+margin-top:35px;
+
+display:grid;
+
+gap:22px;
+
+}
+
+.highlight-box{
+
+display:flex;
+
+align-items:flex-start;
+
+gap:18px;
+
+padding:22px;
+
+background:#0B1F39;
+
+border-radius:18px;
+
+border:1px solid rgba(255,255,255,.06);
+
+transition:.4s;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.highlight-box::before{
+
+content:"";
+
+position:absolute;
+
+left:-100%;
+
+top:0;
+
+width:55%;
+
+height:2px;
+
+background:linear-gradient(
+90deg,
+transparent,
+#F4B400,
+transparent
+);
+
+animation:cardLight 5s linear infinite;
+
+}
+
+.highlight-box:hover{
+
+transform:translateY(-8px);
+
+border-color:rgba(244,180,0,.25);
+
+box-shadow:0 18px 40px rgba(0,0,0,.35);
+
+}
+
+.highlight-box i{
+
+font-size:32px;
+
+color:#F4B400;
+
+margin-top:5px;
+
+min-width:40px;
+
+}
+
+.highlight-box h4{
+
+font-size:21px;
+
+margin-bottom:8px;
+
+color:#fff;
+
+}
+
+.highlight-box p{
+
+margin:0;
+
+font-size:15px;
+
+color:#d4dfef;
+
+}
+
+/*==============================
+        ADVISOR CARD
+==============================*/
+
+.advisor-card{
+
+background:#0B1F39;
+
+border-radius:24px;
+
+padding:35px;
+
+text-align:center;
+
+border:1px solid rgba(255,255,255,.08);
+
+box-shadow:0 25px 50px rgba(0,0,0,.35);
+
+position:relative;
+
+overflow:hidden;
+
+transition:.4s;
+
+}
+
+.advisor-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-100%;
+
+width:60%;
+
+height:3px;
+
+background:linear-gradient(
+90deg,
+transparent,
+#F4B400,
+transparent
+);
+
+animation:cardLight 5s linear infinite;
+
+}
+
+.advisor-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 30px 60px rgba(0,0,0,.45);
+
+}
+
+.advisor-card img{
+
+width:220px;
+
+height:220px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+margin:0 auto 25px;
+
+border:5px solid rgba(244,180,0,.20);
+
+}
+
+.advisor-card h3{
+
+font-size:30px;
+
+margin-bottom:8px;
+
+color:#fff;
+
+}
+
+.advisor-card span{
+
+display:block;
+
+color:#F4B400;
+
+font-weight:600;
+
+margin-bottom:28px;
+
+}
+
+.advisor-info{
+
+text-align:left;
+
+margin-bottom:30px;
+
+}
+
+.advisor-info p{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+margin-bottom:16px;
+
+font-size:15px;
+
+color:#dce5f5;
+
+}
+
+.advisor-info i{
+
+width:20px;
+
+color:#F4B400;
+
+}
 
 /*=====================================================
         PREMIUM TEXT SELECTION
@@ -1460,6 +1783,164 @@ alt="WhatsApp">
 </section>
 
 <!-- Premium Animated Divider -->
+
+<div class="section-divider"></div>
+            <!--====================================================
+                    ABOUT SECTION
+=====================================================-->
+
+<section id="about" class="about-section">
+
+    <div class="about-container">
+
+        <!--=========================
+                LEFT CONTENT
+        ==========================-->
+
+        <div class="about-content">
+
+            <span class="section-tag">
+
+                ABOUT ME
+
+            </span>
+
+            <h2>
+
+                Meet Your Trusted
+                Financial Advisor
+
+            </h2>
+
+            <p class="about-intro">
+
+                I am <strong>Soumyakanta Sahoo</strong>, a dedicated
+                Financial Advisor committed to helping individuals,
+                families and business owners build wealth, save taxes
+                and secure their financial future through customized
+                financial solutions.
+
+            </p>
+
+            <p>
+
+                My approach is simple — understand your financial
+                goals first, then recommend solutions that truly fit
+                your needs. Whether you're planning for your child's
+                education, retirement, wealth creation or financial
+                protection, I'm here to guide you at every step.
+
+            </p>
+
+            <div class="about-highlights">
+
+                <div class="highlight-box">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    <div>
+
+                        <h4>Wealth Creation</h4>
+
+                        <p>Long-term investment planning for financial growth.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="highlight-box">
+
+                    <i class="fa-solid fa-piggy-bank"></i>
+
+                    <div>
+
+                        <h4>Tax Saving</h4>
+
+                        <p>Smart tax-saving solutions with future benefits.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="highlight-box">
+
+                    <i class="fa-solid fa-shield-heart"></i>
+
+                    <div>
+
+                        <h4>Financial Protection</h4>
+
+                        <p>Comprehensive insurance solutions for every family.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--=========================
+                RIGHT CARD
+        ==========================-->
+
+        <div class="advisor-card">
+
+            <img src="ssphoto.png"
+                 alt="Soumyakanta Sahoo">
+
+            <h3>
+
+                Soumyakanta Sahoo
+
+            </h3>
+
+            <span>
+
+                Financial Advisor
+
+            </span>
+
+            <div class="advisor-info">
+
+                <p>
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    +91 7008450300
+
+                </p>
+
+                <p>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    soumyakantaindia@gmail.com
+
+                </p>
+
+                <p>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Bhubaneswar, Odisha
+
+                </p>
+
+            </div>
+
+            <a href="#appointment"
+               class="btn primary">
+
+                Schedule Consultation
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 
 <div class="section-divider"></div>
     
