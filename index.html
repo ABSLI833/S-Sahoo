@@ -32,17 +32,143 @@ body{
 
 }
 
-/* HEADER */
+/*=========================
+        HEADER
+=========================*/
+
 nav{
-display:flex;justify-content:space-between;align-items:center;
-padding:12px 5%;background:rgba(255,255,255,0.9);
-backdrop-filter:blur(10px);border-bottom:2px solid #ffd700;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 5%;
+
+    background:#071B44;
+
+    border-bottom:2px solid #F4B400;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:9999;
+
 }
-.logo-box{display:flex;align-items:center;gap:10px;}
-.logo-box img{height:40px;}
-.logo-box h2{font-family:'Playfair Display';color:#2b2f77;margin:0;}
-.menu{display:flex;gap:25px;align-items:center;}
-.book-btn{background:#ffd700;padding:8px 18px;border-radius:20px;}
+
+/*=========================
+      LOGO AREA
+=========================*/
+
+.logo-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    flex:1;
+
+}
+
+.logo-box img{
+
+    height:48px;
+
+    width:auto;
+
+}
+
+.logo-box h2{
+
+    margin:0;
+
+    font-family:'Playfair Display',serif;
+
+    color:#ffffff;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    white-space:nowrap;
+
+}
+
+/*=========================
+      MENU
+=========================*/
+
+.menu{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-end;
+
+    gap:28px;
+
+    flex:1;
+
+}
+
+.menu a{
+
+    color:#ffffff;
+
+    text-decoration:none;
+
+    font-weight:500;
+
+    font-size:17px;
+
+}
+
+.menu a:hover{
+
+    color:#FFD700;
+
+}
+
+/*=========================
+      BUTTON
+=========================*/
+
+.book-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#FFD700;
+
+    color:#071B44;
+
+    text-decoration:none;
+
+    padding:12px 28px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.book-btn:hover{
+
+    background:#ffffff;
+
+    transform:translateY(-2px);
+
+}
 
 /* HERO */
 .hero{
@@ -1214,7 +1340,7 @@ class="whatsapp-float" target="_blank">
 <nav>
 <div class="logo-box">
 <img src="logo.png">
-<h2>Soumyakanta Sahoo</h2>
+<h2>Advisor Soumyakanta</h2>
 </div>
 <div class="menu">
   <a href="#services">services</a>
