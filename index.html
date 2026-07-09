@@ -1,1858 +1,1703 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Soumyakanta Sahoo</title>
+<title>Soumyakanta Sahoo | Financial Advisor</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-    <link
-rel="stylesheet"
+<meta name="description" content="Professional Financial Advisor - Soumyakanta Sahoo. Helping families achieve financial freedom through wealth creation, retirement planning, tax saving and insurance solutions.">
+
+<meta name="keywords" content="Soumyakanta Sahoo, Financial Advisor, Aditya Birla Sun Life Insurance, Investment Planning, Tax Saving, Retirement Planning, Insurance Advisor">
+
+<meta name="author" content="Soumyakanta Sahoo">
+
+<meta name="theme-color" content="#061325">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 <style>
+
+/*=====================================================
+        GLOBAL RESET
+=====================================================*/
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+html{
+scroll-behavior:smooth;
+overflow-x:hidden;
+}
+
 body{
 
-    margin:0;
+font-family:'Poppins',sans-serif;
 
-    font-family:Poppins,sans-serif;
+background:#061325;
 
-    background:#031B4E;
+color:#ffffff;
 
-    color:#ffffff;
+overflow-x:hidden;
 
-    overflow-x:hidden;
-
-}
-
-    color:#ffffff;
-
-    overflow-x:hidden;
+line-height:1.6;
 
 }
 
-/*=========================
-        HEADER
-=========================*/
+/*=====================================================
+          PREMIUM COLOR PALETTE
+=====================================================*/
+
+:root{
+
+--bg-main:#061325;
+
+--bg-section:#081A2F;
+
+--bg-card:#0D2340;
+
+--primary:#F4B400;
+
+--secondary:#D62D2D;
+
+--text:#FFFFFF;
+
+--text-light:#D9E4F5;
+
+--border:rgba(255,255,255,.08);
+
+--shadow:0 15px 40px rgba(0,0,0,.35);
+
+--radius:22px;
+
+}
+
+/*=====================================================
+      DEFAULT ELEMENTS
+=====================================================*/
+
+img{
+max-width:100%;
+display:block;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+transition:.35s;
+}
+
+button{
+
+font-family:'Poppins',sans-serif;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+ul{
+list-style:none;
+}
+
+section{
+
+position:relative;
+
+padding:70px 5%;
+
+background:var(--bg-main);
+
+overflow:hidden;
+
+}
+
+h1,h2,h3,h4{
+
+font-family:'Playfair Display',serif;
+
+font-weight:700;
+
+color:#ffffff;
+
+}
+
+p{
+
+color:var(--text-light);
+
+font-size:15px;
+
+line-height:1.8;
+
+}
+    /*=====================================================
+                PREMIUM HEADER
+=====================================================*/
 
 nav{
 
-    width:100%;
+position:fixed;
 
-    height:78px;
+top:0;
+left:0;
 
-    box-sizing:border-box;
+width:100%;
 
-    display:flex;
+padding:14px 5%;
 
-    align-items:center;
+display:flex;
 
-    justify-content:space-between;
+justify-content:space-between;
 
-    padding:0 40px;
+align-items:center;
 
-    background:#071B44;
+background:rgba(6,19,37,.90);
 
-    border-bottom:2px solid #FFD700;
+backdrop-filter:blur(18px);
+
+-webkit-backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+z-index:9999;
+
+transition:.35s;
 
 }
 
-/* LOGO */
+/* GOLDEN TOP GLOW */
+
+nav::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+top:0;
+
+width:100%;
+height:2px;
+
+background:linear-gradient(
+90deg,
+transparent,
+#D62D2D,
+#F4B400,
+#D62D2D,
+transparent
+);
+
+background-size:250%;
+
+animation:navGlow 5s linear infinite;
+
+}
+
+@keyframes navGlow{
+
+0%{
+
+background-position:0%;
+
+}
+
+100%{
+
+background-position:250%;
+
+}
+
+}
+
+/*==================================
+        LOGO
+==================================*/
 
 .logo-box{
 
-    display:flex;
+display:flex;
 
-    align-items:center;
+align-items:center;
 
-    gap:12px;
+gap:14px;
 
-    width:35%;
+z-index:2;
 
 }
 
 .logo-box img{
 
-    width:52px;
+width:46px;
 
-    height:52px;
+height:46px;
 
-    object-fit:contain;
+object-fit:contain;
+
+transition:.35s;
+
+}
+
+.logo-box:hover img{
+
+transform:rotate(-5deg) scale(1.05);
 
 }
 
 .logo-box h2{
 
-    margin:0;
+font-size:28px;
 
-    font-size:22px;
+color:#ffffff;
 
-    color:#fff;
+letter-spacing:.3px;
 
-    font-family:'Playfair Display',serif;
-
-    font-weight:700;
-
-    white-space:nowrap;
+transition:.35s;
 
 }
 
-/* MENU */
+.logo-box:hover h2{
+
+color:var(--primary);
+
+}
+
+/*==================================
+            MENU
+==================================*/
 
 .menu{
 
-    width:65%;
+display:flex;
 
-    display:flex;
+align-items:center;
 
-    justify-content:flex-end;
-
-    align-items:center;
-
-    gap:28px;
+gap:28px;
 
 }
 
 .menu a{
 
-    color:#fff;
+font-size:15px;
 
-    text-decoration:none;
+font-weight:600;
 
-    font-size:16px;
+color:#ffffff;
 
-    font-weight:500;
+position:relative;
+
+text-transform:capitalize;
+
+transition:.35s;
 
 }
 
-/* BUTTON */
+/* HOVER LINE */
+
+.menu a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-6px;
+
+width:0;
+
+height:2px;
+
+background:linear-gradient(
+90deg,
+#D62D2D,
+#F4B400
+);
+
+transition:.35s;
+
+}
+
+.menu a:hover{
+
+color:#F4B400;
+
+}
+
+.menu a:hover::after{
+
+width:100%;
+
+}
+
+/*==================================
+      BOOK BUTTON
+==================================*/
 
 .book-btn{
 
-    background:#FFD700;
+padding:11px 24px;
 
-    color:#071B44 !important;
+border-radius:50px;
 
-    padding:11px 24px;
+background:linear-gradient(
+135deg,
+#F4B400,
+#FFD84D
+);
 
-    border-radius:40px;
+color:#111;
 
-    font-weight:700;
+font-weight:700;
+
+box-shadow:
+0 10px 25px rgba(244,180,0,.35);
+
+transition:.35s;
 
 }
 
 .book-btn:hover{
 
-    background:#fff;
-
-}
-
-/* HERO */
-.hero{
-display:flex;
-height:100vh;
-overflow:hidden;
-}
-
-/* LEFT */
-.hero-left{
-width:55%;
-background:transparent;
-color:white;
-padding:80px 5%;
-display:flex;
-flex-direction:column;
-justify-content:center;
-}
-
-/* DIVIDER (🔥 MAIN FEATURE) */
-.hero-divider{
-width:16px;
-background:linear-gradient(180deg,#ff2e2e,#ffd700);
-box-shadow:0 0 20px rgba(255,165,0,0.6);
-}
-
-/* RIGHT IMAGE */
-.hero-right{
-width:45%;
-}
-
-.hero-right img{
-width:100%;
-height:100%;
-object-fit:cover;
-display:block;
-}
-
-/* BADGE */
-.hero-badge{
-background:rgba(255,255,255,0.2);
-padding:6px 14px;
-border-radius:20px;
-font-size:12px;
-margin-bottom:15px;
-display:inline-block;
-}
-
-/* TEXT */
-.hero-left h1{
-animation-delay:0.2s;
-}
-
-.hero-sub{
-animation-delay:0.4s;
-}
-
-.hero-points{
-animation-delay:0.6s;
-}
-
-.hero-buttons{
-animation-delay:0.8s;
-}
-
-.hero-trust{
-animation-delay:1s;
-}
-
-.hero-sub{
-color:#ddd;
-margin-bottom:20px;
-}
-
-/* POINTS */
-.hero-points{
-list-style:none;
-padding:0;
-margin-bottom:25px;
-}
-
-.hero-points li{
-margin-bottom:8px;
-}
-
-/* BUTTONS */
-.hero-buttons{
-display:flex;
-gap:15px;
-margin-bottom:15px;
-}
-
-.btn{
-padding:12px 24px;
-border-radius:25px;
-text-decoration:none;
-font-weight:600;
-transition:all 0.3s ease;
-}
-
-/* PRIMARY */
-.primary{
-background:#ffd700;
-color:black;
-box-shadow:0 8px 20px rgba(255,215,0,0.4);
-}
-
-.primary:hover{
 transform:translateY(-3px);
-box-shadow:0 15px 30px rgba(255,215,0,0.7);
+
+box-shadow:
+0 15px 35px rgba(244,180,0,.50);
+
 }
 
-/* WHATSAPP */
-.whatsapp{
-background:#25d366;
-color:white;
-box-shadow:0 8px 20px rgba(37,211,102,0.4);
-}
+/*==================================
+        MOBILE HEADER
+==================================*/
 
-.whatsapp:hover{
-transform:translateY(-3px);
-box-shadow:0 15px 30px rgba(37,211,102,0.7);
-}
-
-.primary{
-background:#ffd700;
-color:black;
-}
-
-.whatsapp{
-background:#25d366;
-color:white;
-}
-
-/* TRUST */
-.hero-trust{
-font-size:13px;
-color:#eee;
-}
-
-/* MOBILE */
 @media(max-width:768px){
-.hero{
-flex-direction:column;
-height:auto;
-}
 
-.hero-divider{
-height:6px;
-width:100%;
-}
+nav{
 
-.hero-right{
-
-    width:100%;
-
-    margin:0;
-
-    padding:0;
-
-    overflow:hidden;
+padding:14px 18px;
 
 }
 
-.hero-right img{
+.logo-box{
 
-    display:block;
-
-    width:100%;
-
-    height:auto;
-
-    object-fit:cover;
+gap:10px;
 
 }
-}
-/* ABOUT */
-.about{
-text-align:center;
-background:transparent;
-}
 
-.about h2{font-size:34px;color:#2b2f77;}
-.about-sub{
-max-width:700px;margin:10px auto 40px;
-color:#555;line-height:1.6;
+.logo-box img{
+
+width:38px;
+
+height:38px;
+
 }
 
-.about-cards{
-display:flex;gap:25px;justify-content:center;flex-wrap:wrap;
+.logo-box h2{
+
+font-size:21px;
+
 }
 
-.about-card{
-width:260px;border-radius:20px;overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
+.menu{
+
+gap:15px;
+
+flex-wrap:wrap;
+
+justify-content:flex-end;
+
 }
 
-.card-top{
-height:120px;display:flex;align-items:center;
-justify-content:center;font-size:40px;
-}
+.menu a{
 
-.card1{background:#2b2f77;color:white;}
-.card2{background:#6a1b9a;color:white;}
-.card3{background:#ffd700;}
-
-.card-bottom{padding:20px;font-weight:500;}
-
-/* SERVICES */
-.services{
-text-align:center;background:transparent;
-}
-
-.services h2{
-font-size:34px;color:#2b2f77;
-}
-
-.services-sub{
-max-width:700px;margin:10px auto 40px;
-color:#555;
-}
-
-.services-cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.service-card{
-border-radius:20px;overflow:hidden;background:white;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
-transition:0.3s;
-}
-
-.service-card:hover{
-transform:translateY(-10px);
-}
-
-.service-top{
-height:110px;display:flex;align-items:center;
-justify-content:center;font-size:35px;
-background:#2b2f77;color:white;
-}
-
-.service-card h3{margin:15px 0;}
-.service-card p{font-size:14px;color:#666;padding:0 15px;}
-
-.service-card button{
-margin:20px;padding:12px 20px;border:none;
-border-radius:25px;background:#2b2f77;color:white;
-cursor:pointer;
-box-shadow:0 8px 20px rgba(0,0,0,0.2);
-transition:0.3s;
-}
-
-.service-card button:hover{
-background:#ffd700;color:#000;
-box-shadow:0 12px 25px rgba(255,215,0,0.6);
-}
-
-/* POPUP */
-.popup{
-display:none;position:fixed;top:0;left:0;
-width:100%;height:100%;
-background:rgba(0,0,0,0.6);
-justify-content:center;align-items:center;
-}
-
-.popup-content{
-background:white;padding:25px;border-radius:20px;
-width:340px;text-align:center;
-box-shadow:0 20px 50px rgba(0,0,0,0.4);
-position:relative;
-}
-
-.close{
-position:absolute;right:15px;top:10px;
-cursor:pointer;font-size:20px;
-}
-
-.popup-content h3{margin-bottom:5px;}
-.popup-content p{font-size:13px;color:#666;}
-
-.popup-content input{
-width:100%;padding:12px;margin:8px 0;
-border-radius:10px;border:1px solid #ccc;
-}
-
-.popup-content button{
-background:#25D366;color:white;padding:12px;
-border:none;border-radius:25px;width:100%;
-margin-top:10px;
-}
-
-/* TESTIMONIALS */
-.testimonials{
-text-align:center;
-background:transparent;
-}
-
-.testimonials h2{
-font-size:34px;
-color:#2b2f77;
-}
-
-.testimonials-sub{
-max-width:700px;
-margin:10px auto 40px;
-color:#555;
-}
-
-/* GRID */
-.testimonial-cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-/* CARD */
-.testimonial-card{
-background:white;
-padding:25px;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
-position:relative;
-transition:0.3s;
-}
-
-.testimonial-card:hover{
-transform:translateY(-8px);
-}
-
-/* QUOTE ICON */
-.testimonial-card::before{
-content:"“";
-font-size:60px;
-position:absolute;
-top:10px;
-left:15px;
-color:#eee;
-}
-
-/* STARS */
-.stars{
-color:#ffd700;
-font-size:18px;
-margin-bottom:10px;
-}
-
-/* TEXT */
-.testimonial-card p{
-font-size:14px;
-color:#555;
-margin-bottom:15px;
-}
-
-.testimonial-card h4{
-margin:5px 0;
-color:#2b2f77;
-}
-
-.testimonial-card span{
 font-size:13px;
-color:#777;
+
 }
 
-/* WHY SECTION */
-.why{
-text-align:center;
-background:transparent;
+.book-btn{
+
+padding:8px 15px;
+
+font-size:13px;
+
 }
 
-.why h2{
-font-size:36px;
-color:#2b2f77;
-margin-bottom:10px;
 }
+    /*=====================================================
+                    HERO SECTION
+=====================================================*/
 
-.why-sub{
-max-width:720px;
-margin:0 auto 50px;
-color:#555;
-font-size:15px;
-line-height:1.6;
-}
+.hero{
 
-/* GRID */
-.why-cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-margin-bottom:60px;
-}
+display:flex;
 
-.why-card{
-background:white;
-padding:30px 20px;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-transition:0.3s;
-}
+min-height:100vh;
 
-.why-card:hover{
-transform:translateY(-10px);
-box-shadow:0 15px 35px rgba(0,0,0,0.15);
-}
+padding-top:85px;
 
-.why-icon{
-font-size:26px;
-color:#ffd700;
-margin-bottom:12px;
-}
-
-.why-card h3{
-color:#2b2f77;
-margin-bottom:8px;
-font-size:18px;
-}
-
-.why-card p{
-font-size:14px;
-color:#666;
-}
-
-/* BM SECTION */
-.bm-heading{
-margin-top:20px;
-font-size:24px;
-color:#2b2f77;
-}
-
-.bm-box{
-
-    display:flex;
-
-    align-items:flex-start;
-
-    justify-content:center;
-
-    gap:70px;
-
-    margin-top:35px;
-
-    background:#ffffff;
-
-   position:relative;
+background:linear-gradient(
+135deg,
+#061325 0%,
+#081A2F 55%,
+#0B2240 100%
+);
 
 overflow:hidden;
-  
-    padding:40px 50px 25px;
-
-    border-radius:24px;
-
-    border:3px solid transparent;
-
-    background-image:
-        linear-gradient(#ffffff,#ffffff),
-        linear-gradient(135deg,#D62D2D,#F4B400,#D62D2D);
-
-    background-origin:border-box;
-
-    background-clip:padding-box,border-box;
-
-    box-shadow:
-        0 15px 40px rgba(0,0,0,.08);
-
-}
-  .bm-box::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:-80px;
-
-    left:-80px;
-
-    width:260px;
-
-    height:260px;
-
-    background:radial-gradient(circle,
-        rgba(244,180,0,.18),
-        transparent 70%);
-
-    pointer-events:none;
-
-}
- 
-/* LEFT */
-.bm-left{
-text-align:center;
-}
-
-.bm-left img{
-width:150px;
-height:150px;
-border-radius:50%;
-object-fit:cover;
-border:4px solid #ffd700;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
-}
-
-.bm-name{
-margin-top:12px;
-font-weight:600;
-color:#2b2f77;
-}
-
-.bm-role{
-font-size:13px;
-color:#777;
-}
-
-/* RIGHT */
-.bm-right{
-
-flex:1;
-
-max-width:650px;
-
-text-align:left;
 
 position:relative;
 
 }
 
-.bm-text{
+/* PREMIUM BACKGROUND LIGHT */
 
-font-style:italic;
+.hero::before{
 
-font-size:1.18rem;
+content:"";
 
-color:#4b4b4b;
-
-line-height:1.9;
-
-position:relative;
-
-}
-
-/* QUOTE */
-.bm-text::before{
-content:"“";
-font-size:60px;
-color:#eee;
 position:absolute;
-left:-15px;
-top:-10px;
+
+width:600px;
+
+height:600px;
+
+top:-220px;
+
+left:-220px;
+
+background:radial-gradient(
+circle,
+rgba(244,180,0,.10),
+transparent 70%
+);
+
+pointer-events:none;
+
+animation:heroGlow 8s ease-in-out infinite;
+
 }
 
-/* SIGNATURE IMAGE */
-.bm-sign-img{
+.hero::after{
 
-width:180px;
+content:"";
 
-margin-top:18px;
+position:absolute;
 
-display:block;
+width:500px;
 
-margin-left:auto;
+height:500px;
+
+right:-180px;
+
+bottom:-180px;
+
+background:radial-gradient(
+circle,
+rgba(214,45,45,.10),
+transparent 70%
+);
+
+pointer-events:none;
+
+animation:heroGlow2 10s ease-in-out infinite;
+
+}
+
+@keyframes heroGlow{
+
+0%,100%{
+
+transform:scale(1);
+
+opacity:.5;
+
+}
+
+50%{
+
+transform:scale(1.15);
+
+opacity:1;
+
+}
+
+}
+
+@keyframes heroGlow2{
+
+0%,100%{
+
+transform:scale(1);
+
+opacity:.45;
+
+}
+
+50%{
+
+transform:scale(.9);
 
 opacity:.9;
 
 }
 
-/* APPOINTMENT SECTION */
-.appointment{
-background:transparent;
-text-align:center;
 }
 
-.appointment h2{
-font-size:34px;
-color:#2b2f77;
-margin-bottom:10px;
-}
+/*==========================
+        LEFT SIDE
+==========================*/
 
-.appointment-sub{
-max-width:700px;
-margin:0 auto 50px;
-color:#555;
-}
+.hero-left{
 
-/* CONTAINER */
-.appointment-container{
+width:55%;
 
-    display:flex;
+padding:90px 5%;
 
-    justify-content:center;
-
-    align-items:stretch;
-
-    gap:60px;
-
-    flex-wrap:wrap;
-
-}
-
-/* LEFT */
-.appointment-left{
-
-    width:360px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    text-align:center;
-
-    padding:30px;
-
-}
-  /*=========================
-      APPOINTMENT ICON
-=========================*/
-
-.appointment-icon{
-
-    width:150px;
-
-    height:150px;
-
-    margin:0 auto 15px;
-
-    border-radius:50%;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    background:#ffffff;
-
-    border:3px solid transparent;
-
-    background-image:
-        linear-gradient(#ffffff,#ffffff),
-        linear-gradient(135deg,#D62D2D,#F4B400,#D62D2D);
-
-    background-origin:border-box;
-
-    background-clip:padding-box,border-box;
-
-    box-shadow:
-        0 12px 30px rgba(244,180,0,.20);
-
-    overflow:hidden;
-
-}
-   .appointment-icon img{
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-    border-radius:50%;
-
-    transition:.35s;
-
-}
-
-.appointment-icon:hover img{
-
-    transform:scale(1.05);
-
-}
-
-.appointment-left h3{
-
-    font-size:2.15rem;
-
-    font-weight:800;
-
-    color:#1E2F78;
-
-    line-height:1.3;
-
-    margin:10px 0 12px;
-
-    text-align:center;
-
-    letter-spacing:-0.5px;
-
-}
-    /*=========================
-    PREMIUM DIVIDER
-=========================*/
-
-.appointment-divider{
-
-    width:180px;
-
-    height:4px;
-
-    margin:15px auto 20px;
-
-    border-radius:50px;
-
-    background:linear-gradient(
-        90deg,
-        #D62D2D 0%,
-        #F4B400 50%,
-        #D62D2D 100%
-    );
-
-    background-size:200%;
-
-    animation:dividerGlow 4s linear infinite;
-
-    box-shadow:
-        0 0 12px rgba(244,180,0,.35);
-
-}
-    @keyframes dividerGlow{
-
-    from{
-
-        background-position:0%;
-
-    }
-
-    to{
-
-        background-position:200%;
-
-    }
-
-}
-
-.appointment-left ul{
-
-    list-style:none;
-
-    padding:0;
-
-    margin:10px 0 0;
-
-    width:100%;
-
-}
-
-.appointment-left li{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    padding:8px 0;
-
-    font-size:18px;
-
-    color:#333;
-
-    text-align:left;
-
-}
-
-.appointment-left li i{
-
-    color:#2B2F77;
-
-    width:24px;
-
-    min-width:24px;
-
-    text-align:center;
-
-}
-
-/* RIGHT (FORM) */
-.appointment-right{
-
-    background:#ffffff;
-
-    width:360px;
-
-    padding:35px;
-
-    border-radius:24px;
-
-    border:2px solid transparent;
-
-    background-image:
-        linear-gradient(#ffffff,#ffffff),
-        linear-gradient(135deg,#D62D2D,#F4B400,#D62D2D);
-
-    background-origin:border-box;
-
-    background-clip:padding-box,border-box;
-
-    box-shadow:0 18px 40px rgba(0,0,0,.08);
-
-}
-
-.appointment-right input,
-.appointment-right textarea{
-
-    width:100%;
-
-    box-sizing:border-box;
-
-    padding:14px;
-
-    margin-bottom:14px;
-
-    border-radius:12px;
-
-    border:1px solid #d8d8d8;
-
-    font-family:Poppins,sans-serif;
-
-    font-size:15px;
-
-}
-
-.appointment-right textarea{
-height:80px;
-resize:none;
-}
-
-.appointment-right button{
-width:100%;
-
-box-sizing:border-box;
-padding:14px;
-background:#ffd700;
-border:none;
-border-radius:25px;
-font-weight:600;
-cursor:pointer;
-transition:0.3s;
-box-shadow:0 10px 25px rgba(255,215,0,0.4);
-}
-
-.appointment-right button:hover{
-background:#2b2f77;
-color:white;
-box-shadow:0 12px 30px rgba(0,0,0,0.3);
-}
-
-/* TRUST LINE */
-.trust-line{
-
-    margin-top:18px;
-
-    text-align:center;
-
-    font-size:13px;
-
-    color:#666;
-
-    line-height:1.7;
-
-}
-    /*=========================
-      BRAND LOGO
-=========================*/
-
-.appointment-brand{
-
-    margin-top:20px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-}
-
-.appointment-brand img{
-
-    width:180px;
-
-    max-width:80%;
-
-    height:auto;
-
-    opacity:.95;
-
-    transition:.35s;
-
-}
-
-.appointment-brand img:hover{
-
-    transform:scale(1.05);
-
-}
-
-  /* FOOTER */
-.footer{
-background:#2b2f77;
-color:white;
-padding:60px 5% 20px;
-}
-
-.footer-container{
 display:flex;
-justify-content:space-between;
-flex-wrap:wrap;
-gap:40px;
-}
 
-/* LEFT */
-.footer-left h3{
-margin-bottom:5px;
-}
-
-.footer-left p{
-margin:5px 0;
-font-size:14px;
-}
-
-/* MIDDLE & RIGHT */
-.footer-middle h4,
-.footer-right h4{
-margin-bottom:10px;
-}
-
-.footer-middle ul,
-.footer-right ul{
-list-style:none;
-padding:0;
-}
-
-.footer-middle li,
-.footer-right li{
-margin-bottom:8px;
-}
-
-.footer-middle a,
-.footer-right a{
-color:white;
-text-decoration:none;
-font-size:14px;
-}
-
-.footer-middle a:hover,
-.footer-right a:hover{
-text-decoration:underline;
-}
-
-/* NOTE */
-.footer-note{
-margin-top:15px;
-font-size:12px;
-color:#ddd;
-}
-
-/* BOTTOM */
-.footer-bottom{
-text-align:center;
-margin-top:30px;
-border-top:1px solid rgba(255,255,255,0.2);
-padding-top:15px;
-font-size:13px;
-color:#ccc;
-}
-
-/* GLOBAL SECTION SPACING FIX */
-section{
-padding:50px 5%;
-margin:0;
-}
-
-section h2{
-margin-top:0;
-}
-/* TEXT FADE-IN */
-.hero-left{
-animation:fadeInLeft 1s ease forwards;
-opacity:0;
-}
-
-@keyframes fadeInLeft{
-0%{
-opacity:0;
-transform:translateX(-40px);
-}
-100%{
-opacity:1;
-transform:translateX(0);
-}
-}
-
-/* IMAGE SLIDE-IN */
-.hero-right{
-animation:fadeInRight 1.2s ease forwards;
-opacity:0;
-}
-
-@keyframes fadeInRight{
-0%{
-opacity:0;
-transform:translateX(60px);
-}
-100%{
-opacity:1;
-transform:translateX(0);
-}
-}
-/* MOBILE HERO FIX */
-@media(max-width:768px){
-
-.hero{
 flex-direction:column;
-height:auto;
+
+justify-content:center;
+
+color:#fff;
+
+animation:fadeInLeft 1s ease forwards;
+
+opacity:0;
+
+z-index:2;
+
 }
 
-/* LEFT FULL WIDTH */
-.hero-left{
-width:100%;
-padding:60px 20px;
-text-align:left;
+.hero-badge{
+
+display:inline-block;
+
+width:max-content;
+
+padding:8px 18px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(244,180,0,.35);
+
+color:#F4B400;
+
+font-size:13px;
+
+font-weight:600;
+
+margin-bottom:22px;
+
+backdrop-filter:blur(8px);
+
 }
 
-/* REMOVE DIVIDER */
-.hero-divider{
-display:none;
-}
-
-/* IMAGE FULL WIDTH */
-.hero-right{
-width:100%;
-margin:0;
-}
-
-.hero-right img{
-width:100%;
-height:auto;
-}
-
-/* BUTTONS STACK PROPERLY */
-.hero-buttons{
-flex-direction:row;
-flex-wrap:wrap;
-gap:10px;
-}
-
-/* TEXT SIZE ADJUST */
 .hero-left h1{
-font-size:28px;
+
+font-size:54px;
+
+line-height:1.18;
+
+margin-bottom:22px;
+
+color:#ffffff;
+
 }
 
 .hero-sub{
+
+font-size:17px;
+
+color:#D9E4F5;
+
+margin-bottom:28px;
+
+max-width:620px;
+
+}
+
+.hero-points{
+
+margin-bottom:35px;
+
+}
+
+.hero-points li{
+
+margin-bottom:12px;
+
+font-size:17px;
+
+color:#ffffff;
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+}
+
+/*==========================
+        BUTTONS
+==========================*/
+
+.hero-buttons{
+
+display:flex;
+
+gap:18px;
+
+margin-bottom:22px;
+
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+padding:14px 28px;
+
+border-radius:50px;
+
+font-weight:700;
+
+transition:.35s;
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+.primary{
+
+background:linear-gradient(
+135deg,
+#F4B400,
+#FFD84D
+);
+
+color:#111;
+
+box-shadow:0 12px 30px rgba(244,180,0,.35);
+
+}
+
+.primary:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 18px 40px rgba(244,180,0,.45);
+
+}
+
+.whatsapp{
+
+background:#25D366;
+
+color:#fff;
+
+box-shadow:0 12px 30px rgba(37,211,102,.35);
+
+}
+
+.whatsapp:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 18px 40px rgba(37,211,102,.45);
+
+}
+
+.hero-trust{
+
 font-size:14px;
+
+color:#d9e4f5;
+
+}
+
+/*==========================
+        DIVIDER
+==========================*/
+
+.hero-divider{
+
+width:12px;
+
+background:linear-gradient(
+180deg,
+#D62D2D,
+#F4B400,
+#D62D2D
+);
+
+background-size:100% 250%;
+
+animation:heroDivider 5s linear infinite;
+
+box-shadow:
+
+0 0 18px rgba(244,180,0,.35),
+
+0 0 30px rgba(214,45,45,.20);
+
+}
+
+@keyframes heroDivider{
+
+0%{
+
+background-position:0%;
+
+}
+
+100%{
+
+background-position:0% 250%;
+
 }
 
 }
+
+/*==========================
+        RIGHT SIDE
+==========================*/
+
+.hero-right{
+
+width:45%;
+
+animation:fadeInRight 1.2s ease forwards;
+
+opacity:0;
+
+overflow:hidden;
+
+position:relative;
+
+}
+
+.hero-right img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+display:block;
+
+transition:.5s;
+
+}
+
+.hero-right:hover img{
+
+transform:scale(1.03);
+
+}
+
+/*==========================
+      HERO ANIMATION
+(SAME EFFECT AS ORIGINAL)
+==========================*/
+
+@keyframes fadeInLeft{
+
+0%{
+
+opacity:0;
+
+transform:translateX(-40px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+}
+
+@keyframes fadeInRight{
+
+0%{
+
+opacity:0;
+
+transform:translateX(60px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+}
+    /*=====================================================
+        PREMIUM SECTION DIVIDER
+=====================================================*/
+
+.section-divider{
+
+position:relative;
+
+width:100%;
+
+height:5px;
+
+margin:0;
+
+overflow:hidden;
+
+background:linear-gradient(
+90deg,
+#D62D2D 0%,
+#F4B400 50%,
+#D62D2D 100%
+);
+
+background-size:200%;
+
+animation:dividerFlow 5s linear infinite;
+
+box-shadow:
+0 0 15px rgba(244,180,0,.35),
+0 0 30px rgba(214,45,45,.20);
+
+}
+
+/* Moving Golden Light */
+
+.section-divider::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-30%;
+
+width:30%;
+
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.95),
+transparent
+);
+
+filter:blur(2px);
+
+animation:lightPass 3.2s linear infinite;
+
+}
+
+@keyframes dividerFlow{
+
+0%{
+
+background-position:0%;
+
+}
+
+100%{
+
+background-position:200%;
+
+}
+
+}
+
+@keyframes lightPass{
+
+0%{
+
+left:-35%;
+
+}
+
+100%{
+
+left:135%;
+
+}
+
+}
+
+/*=====================================================
+            GLOBAL SECTION STYLE
+=====================================================*/
+
+section{
+
+position:relative;
+
+padding:70px 5%;
+
+background:var(--bg-main);
+
+overflow:hidden;
+
+}
+
+section h2{
+
+font-size:38px;
+
+margin-bottom:15px;
+
+color:#ffffff;
+
+text-align:center;
+
+}
+
+section p{
+
+color:#D9E4F5;
+
+}
+
+/*=====================================================
+        PREMIUM CARD EFFECT
+=====================================================*/
+
+.about-card,
+.service-card,
+.testimonial-card,
+.why-card,
+.appointment-right,
+.bm-box{
+
+background:var(--bg-card);
+
+border:1px solid rgba(255,255,255,.06);
+
+border-radius:22px;
+
+box-shadow:0 18px 45px rgba(0,0,0,.28);
+
+transition:.4s;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/* Top Golden Glow */
+
+.about-card::before,
+.service-card::before,
+.testimonial-card::before,
+.why-card::before,
+.appointment-right::before,
+.bm-box::before{
+
+content:"";
+
+position:absolute;
+
+left:-100%;
+
+top:0;
+
+width:60%;
+
+height:2px;
+
+background:linear-gradient(
+90deg,
+transparent,
+#F4B400,
+transparent
+);
+
+animation:cardLight 5s linear infinite;
+
+}
+
+@keyframes cardLight{
+
+0%{
+
+left:-100%;
+
+}
+
+100%{
+
+left:150%;
+
+}
+
+}
+
+.about-card:hover,
+.service-card:hover,
+.testimonial-card:hover,
+.why-card:hover,
+.appointment-right:hover,
+.bm-box:hover{
+
+transform:translateY(-10px);
+
+box-shadow:
+0 25px 55px rgba(0,0,0,.40);
+
+border-color:rgba(244,180,0,.25);
+
+}
+
+/*=====================================================
+        SCROLL REVEAL ANIMATION
+=====================================================*/
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(40px);
+
+animation:sectionReveal 1s ease forwards;
+
+}
+
+@keyframes sectionReveal{
+
+0%{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/*=====================================================
+            IMAGE HOVER
+=====================================================*/
+
+img{
+
+transition:.45s;
+
+}
+
+img:hover{
+
+transform:scale(1.02);
+
+}
+
+/*=====================================================
+        PREMIUM BUTTON EFFECT
+=====================================================*/
+
+.btn,
+button{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.btn::before,
+button::before{
+
+content:"";
+
+position:absolute;
+
+left:-100%;
+
+top:0;
+
+width:50%;
+
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.35),
+transparent
+);
+
+transform:skewX(-25deg);
+
+transition:none;
+
+}
+
+.btn:hover::before,
+button:hover::before{
+
+animation:buttonLight .8s linear;
+
+}
+
+@keyframes buttonLight{
+
+0%{
+
+left:-100%;
+
+}
+
+100%{
+
+left:170%;
+
+}
+
+}
+    /*=====================================================
+            PREMIUM FLOATING WHATSAPP
+=====================================================*/
+
 .whatsapp-float{
+
 position:fixed;
-bottom:20px;
-right:20px;
-width:60px;
-height:60px;
-background:#25d366;
+
+right:22px;
+
+bottom:22px;
+
+width:62px;
+
+height:62px;
+
 border-radius:50%;
+
+background:#25D366;
+
 display:flex;
+
 align-items:center;
+
 justify-content:center;
-box-shadow:0 8px 25px rgba(0,0,0,0.3);
-z-index:999;
-animation:pulse 2s infinite;
-transition:0.3s;
+
+z-index:99999;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.35);
+
+animation:whatsappPulse 2s infinite;
+
+transition:.35s;
+
 }
 
 .whatsapp-float img{
-width:30px;
-height:30px;
+
+width:32px;
+
+height:32px;
+
 }
 
-/* HOVER */
 .whatsapp-float:hover{
-transform:scale(1.1);
-box-shadow:0 12px 30px rgba(0,0,0,0.4);
+
+transform:scale(1.12);
+
+box-shadow:
+0 18px 40px rgba(37,211,102,.45);
+
 }
 
-/* PULSE ANIMATION */
-@keyframes pulse{
+@keyframes whatsappPulse{
+
 0%{
-box-shadow:0 0 0 0 rgba(37,211,102,0.7);
+
+box-shadow:
+0 0 0 0 rgba(37,211,102,.70);
+
 }
+
 70%{
-box-shadow:0 0 0 15px rgba(37,211,102,0);
+
+box-shadow:
+0 0 0 18px rgba(37,211,102,0);
+
 }
+
 100%{
-box-shadow:0 0 0 0 rgba(37,211,102,0);
-}
-}
-      @media(max-width:768px){
 
-.bm-box{
-
-    flex-direction:column;
-
-    align-items:center;
-
-    text-align:center;
-
-    gap:30px;
-
-    padding:30px 20px;
+box-shadow:
+0 0 0 0 rgba(37,211,102,0);
 
 }
 
-.bm-left{
+}
+    
 
-    width:100%;
+/*=====================================================
+            CUSTOM SCROLLBAR
+=====================================================*/
+
+::-webkit-scrollbar{
+
+width:10px;
 
 }
 
-.bm-right{
+::-webkit-scrollbar-track{
 
-    width:100%;
-
-    max-width:100%;
-
-    text-align:center;
+background:#061325;
 
 }
 
-.bm-text{
+::-webkit-scrollbar-thumb{
 
-    font-size:17px;
+background:linear-gradient(
+180deg,
+#D62D2D,
+#F4B400
+);
 
-    line-height:1.8;
-
-}
-
-.bm-text::before{
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    top:-30px;
+border-radius:30px;
 
 }
 
-.bm-sign-img{
+::-webkit-scrollbar-thumb:hover{
 
-    margin:25px auto 0;
+background:linear-gradient(
+180deg,
+#F4B400,
+#D62D2D
+);
 
 }
 
-</style>
+/*=====================================================
+        PREMIUM TEXT SELECTION
+=====================================================*/
+
+::selection{
+
+background:#F4B400;
+
+color:#061325;
+
+}
+
+/*=====================================================
+            MOBILE RESPONSIVE
+=====================================================*/
+
+@media(max-width:992px){
+
+.hero{
+
+flex-direction:column;
+
+min-height:auto;
+
+}
+
+.hero-left{
+
+width:100%;
+
+padding:70px 30px 40px;
+
+text-align:center;
+
+align-items:center;
+
+}
+
+.hero-left h1{
+
+font-size:42px;
+
+}
+
+.hero-sub{
+
+max-width:100%;
+
+}
+
+.hero-points{
+
+display:inline-block;
+
+text-align:left;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+.hero-divider{
+
+display:none;
+
+}
+
+.hero-right{
+
+width:100%;
+
+}
+
+.hero-right img{
+
+width:100%;
+
+height:auto;
+
+object-fit:cover;
+
+}
+
+}
+
+/*================ MOBILE =================*/
+
+@media(max-width:768px){
+
+section{
+
+padding:55px 20px;
+
+}
+
+.hero{
+
+padding-top:75px;
+
+}
+
+.hero-left{
+
+padding:55px 20px 35px;
+
+}
+
+.hero-left h1{
+
+font-size:32px;
+
+line-height:1.3;
+
+}
+
+.hero-sub{
+
+font-size:15px;
+
+}
+
+.hero-points li{
+
+font-size:15px;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+width:100%;
+
+}
+
+.btn{
+
+width:100%;
+
+justify-content:center;
+
+}
+
+section h2{
+
+font-size:28px;
+
+}
+
+.whatsapp-float{
+
+width:56px;
+
+height:56px;
+
+right:16px;
+
+bottom:16px;
+
+}
+
+.whatsapp-float img{
+
+width:28px;
+
+height:28px;
+
+}
+
+}
+
+/*=====================================================
+        SMALL MOBILE DEVICES
+=====================================================*/
+
+@media(max-width:480px){
+
+.logo-box h2{
+
+font-size:18px;
+
+}
+
+.hero-left h1{
+
+font-size:28px;
+
+}
+
+.hero-sub{
+
+font-size:14px;
+
+}
+
+.hero-points li{
+
+font-size:14px;
+
+}
+
+.btn{
+
+padding:13px 20px;
+
+font-size:14px;
+
+}
+
+section{
+
+padding:50px 18px;
+
+}
+
+}
+    </style>
+
 </head>
     <body>
-<a href="https://wa.me/917008450300?text=Hi,%20I%20want%20financial%20planning%20consultation" 
-class="whatsapp-float" target="_blank">
 
-<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+<!-- ==========================================
+        FLOATING WHATSAPP BUTTON
+=========================================== -->
+
+<a href="https://wa.me/917008450300?text=Hi,%20I%20would%20like%20to%20book%20a%20financial%20consultation."
+class="whatsapp-float"
+target="_blank"
+aria-label="WhatsApp">
+
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+alt="WhatsApp">
 
 </a>
 
-<!-- HEADER -->
+<!-- ==========================================
+              PREMIUM HEADER
+=========================================== -->
+
 <nav>
-<div class="logo-box">
-<img src="logo.png">
-<h2>Advisor Soumyakanta</h2>
-</div>
-<div class="menu">
-  <a href="#services">services</a>
-  <a href="#about">about</a>
-  <a href="#appointment" class="book-btn">Book Now</a>
-</div>
+
+    <div class="logo-box">
+
+        <img src="logo.png" alt="Logo">
+
+        <h2>Soumyakanta Sahoo</h2>
+
+    </div>
+
+    <div class="menu">
+
+        <a href="#home">Home</a>
+
+        <a href="#about">About</a>
+
+        <a href="#services">Services</a>
+
+        <a href="#appointment" class="book-btn">
+
+            Book Appointment
+
+        </a>
+
+    </div>
+
 </nav>
-
-<!-- HERO SECTION -->
-<section class="hero">
-
-<!-- LEFT -->
-<div class="hero-left">
-
-<p class="hero-badge">Trusted Financial Advisor in Uttara</p>
-
-<h1>Secure Your Future with Smart Financial Planning</h1>
-
-<p class="hero-sub">
-Trusted advisor helping you grow wealth, save taxes & secure your family with smart financial strategies.
-</p>
-
-<ul class="hero-points">
-<li>✔ Build Wealth Smartly</li>
-<li>✔ Save Taxes Efficiently</li>
-<li>✔ Protect Your Family</li>
-</ul>
-
-<div class="hero-buttons">
-<a href="#appointment" class="btn primary">Book Appointment</a>
-<a href="https://wa.me/917008450300" class="btn whatsapp">WhatsApp</a>
-</div>
-
-<p class="hero-trust">
-✔ 2+ Years Experience | MRA Advisor | Trusted by Clients
-</p>
-
-</div>
-
-<!-- DIVIDER -->
-<div class="hero-divider"></div>
-
-<!-- RIGHT -->
-<div class="hero-right">
-<img src="ssphoto.png" alt="Advisor">
-</div>
-
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="about">
-<h2>Know Your Advisor – Soumyakanta Sahoo</h2>
-
-<p class="about-sub">
-I help individuals and families achieve financial security through smart planning, tax-saving strategies, and wealth creation solutions.
-</p>
-
-<div class="about-cards">
-<div class="about-card">
-<div class="card-top card1">📈</div>
-<div class="card-bottom">2+ Years Experience</div>
-</div>
-
-<div class="about-card">
-<div class="card-top card2">🏆</div>
-<div class="card-bottom">MRA Advisor</div>
-</div>
-
-<div class="about-card">
-<div class="card-top card3">🤝</div>
-<div class="card-bottom">Trusted by Clients</div>
-</div>
-</div>
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="services">
-<h2>Our Financial Planning Services</h2>
-
-<p class="services-sub">
-Choose a service and get a personalized financial plan designed for your goals.
-</p>
-
-<div class="services-cards">
-
-<div class="service-card">
-<div class="service-top">📈</div>
-<h3>Retirement Planning</h3>
-<p>Build a secure future income</p>
-<button onclick="openForm('Retirement')">Plan My Retirement</button>
-</div>
-
-<div class="service-card">
-<div class="service-top">🎓</div>
-<h3>Child Education</h3>
-<p>Secure your child future</p>
-<button onclick="openForm('Child')">Plan Child Future</button>
-</div>
-
-<div class="service-card">
-<div class="service-top">💰</div>
-<h3>Tax Saving</h3>
-<p>Maximize savings smartly</p>
-<button onclick="openForm('Tax')">Save My Tax</button>
-</div>
-
-<div class="service-card">
-<div class="service-top">📊</div>
-<h3>Wealth Creation</h3>
-<p>Grow your investments</p>
-<button onclick="openForm('Wealth')">Grow My Wealth</button>
-</div>
-
-<div class="service-card">
-<div class="service-top">🛡</div>
-<h3>Insurance Protection</h3>
-<p>Protect your family</p>
-<button onclick="openForm('Insurance')">Protect My Family</button>
-</div>
-
-<div class="service-card">
-<div class="service-top">🌍</div>
-<h3>NRI Planning</h3>
-<p>Smart global planning</p>
-<button onclick="openForm('NRI')">Plan My Investment</button>
-</div>
-
-</div>
-</section>
-
-<!-- POPUP -->
-<div id="popupForm" class="popup">
-<div class="popup-content">
-
-<span class="close" onclick="closeForm()">&times;</span>
-
-<h3>Get Your Personalized Plan</h3>
-<p>Fill details to receive expert guidance</p>
-
-<input id="name" placeholder="Name">
-<input id="phone" placeholder="WhatsApp Number">
-<input id="age" placeholder="Age">
-<input id="income" placeholder="Monthly Income">
-
-<div id="childFields" style="display:none;">
-<input id="childName" placeholder="Child Name">
-<input id="childAge" placeholder="Child Age">
-</div>
-
-<button onclick="sendWhatsApp()">Submit</button>
-
-</div>
-</div>
-
-<script>
-let service="";
-
-function openForm(s){
-service=s;
-document.getElementById("popupForm").style.display="flex";
-
-if(s==="Child"){
-document.getElementById("childFields").style.display="block";
-}else{
-document.getElementById("childFields").style.display="none";
-}
-}
-
-function closeForm(){
-document.getElementById("popupForm").style.display="none";
-}
-
-function sendAppointment(){
-
-    let name=document.getElementById("app-name").value.trim();
-
-    let phone=document.getElementById("app-phone").value.trim();
-
-    let email=document.getElementById("app-email").value.trim();
-
-    let message=document.getElementById("app-msg").value.trim();
-
-    if(name==="" || phone===""){
-
-        alert("Please enter your Name and Mobile Number.");
-
-        return;
-
-    }
-
-    let whatsappMessage =
-`📋 *New Consultation Request*
-
-👤 Name: ${name}
-
-📞 Mobile: ${phone}
-
-📧 Email: ${email}
-
-💬 Message:
-${message}
-
-------------------------
-Submitted from Website`;
-
-    let url =
-`https://wa.me/919337208017?text=${encodeURIComponent(whatsappMessage)}`;
-
-    window.open(url,"_blank");
-
-    alert("✅ Thank you!\n\nYour request has been submitted successfully.\n\nOur advisor will contact you within 6 hours.");
-
-    document.getElementById("app-name").value="";
-    document.getElementById("app-phone").value="";
-    document.getElementById("app-email").value="";
-    document.getElementById("app-msg").value="";
-
-}
-</script>
-
-</body>
-</html>
-<!-- TESTIMONIALS -->
-<section class="testimonials">
-
-<h2>What Our Clients Say</h2>
-
-<p class="testimonials-sub">
-Real experiences from clients who trusted our financial guidance
-</p>
-
-<div class="testimonial-cards">
-
-<div class="testimonial-card">
-<div class="stars">★★★★★</div>
-<p>"Excellent guidance! My financial planning is now clear and structured."</p>
-<h4>Dinesh Rout</h4>
-<span>Business Owner</span>
-</div>
-
-<div class="testimonial-card">
-<div class="stars">★★★★★</div>
-<p>"Highly professional advisor. Helped me save taxes effectively."</p>
-<h4>Shivam Pani</h4>
-<span>Salaried Professional</span>
-</div>
-
-<div class="testimonial-card">
-<div class="stars">★★★★★</div>
-<p>"Very supportive and trustworthy. Explained everything clearly."</p>
-<h4>Dr. Shrikant Lenka</h4>
-<span>Doctor</span>
-</div>
-
-<div class="testimonial-card">
-<div class="stars">★★★★★</div>
-<p>"Best financial planning experience I’ve had so far."</p>
-<h4>Peehu Das</h4>
-<span>Entrepreneur</span>
-</div>
-
-<div class="testimonial-card">
-<div class="stars">★★★★★</div>
-<p>"Great experience. I feel confident about my future now."</p>
-<h4>M. Bisoi</h4>
-<span>IT Professional</span>
-</div>
-
-<div class="testimonial-card">
-<div class="stars">★★★★★</div>
-<p>"Highly recommended for anyone serious about wealth creation."</p>
-<h4>Dipti Satpathi</h4>
-<span>NRI Client</span>
-</div>
-
-</div>
-
-</section>
-<!-- WHY CHOOSE US -->
-<section class="why">
-
-<h2>Why Choose Soumyakanta Sahoo?</h2>
-
-<p class="why-sub">
-Expert guidance, personalized strategies, and complete financial support you can rely on for your long-term financial success.
-</p>
-
-<!-- GRID -->
-<div class="why-cards">
-
-<div class="why-card">
-<div class="why-icon">✔</div>
-<h3>Personalized Planning</h3>
-<p>Customized strategies based on your financial goals</p>
-</div>
-
-<div class="why-card">
-<div class="why-icon">✔</div>
-<h3>Expert Guidance</h3>
-<p>Professional advice backed by real experience</p>
-</div>
-
-<div class="why-card">
-<div class="why-icon">✔</div>
-<h3>Tax Optimization</h3>
-<p>Smart planning to maximize your savings</p>
-</div>
-
-<div class="why-card">
-<div class="why-icon">✔</div>
-<h3>Long-Term Support</h3>
-<p>Continuous support throughout your journey</p>
-</div>
-
-<div class="why-card">
-<div class="why-icon">✔</div>
-<h3>Trusted Advisor</h3>
-<p>Focused on building long-term relationships</p>
-</div>
-
-<div class="why-card">
-<div class="why-icon">✔</div>
-<h3>Goal-Based Approach</h3>
-<p>Solutions aligned with your life goals</p>
-</div>
-
-</div>
-
-<!-- BM HEADING -->
-<h3 class="bm-heading">A Word from Our Branch Leadership</h3>
-
-<!-- BM BOX -->
-<div class="bm-box">
-
-<div class="bm-left">
-<img src="bm.png" alt="Branch Manager">
-<p class="bm-name">Amar Prasad Nayak</p>
-<span class="bm-role">Branch Manager – ABSLI Puri</span>
-</div>
-
-<div class="bm-right">
-
-<p class="bm-text">
-“Soumyakanta  has consistently demonstrated professionalism and dedication in delivering financial solutions. Her client-first approach and commitment to excellence make her a trusted advisor for individuals seeking long-term financial security.”
-</p>
-
-<!-- SIGNATURE IMAGE -->
-<img src="https://absli833.github.io/M.Panda/extraordinary.png" class="bm-sign-img">
-
-</div>
-
-</div>
-
-</section>
-<!--====================================================
-                APPOINTMENT SECTION
+        <!--====================================================
+                    HERO SECTION
 =====================================================-->
 
-<section id="appointment" class="appointment">
+<section id="home" class="hero">
 
-    <h2>
-        Get Your Personalized Financial Plan
-        <br>
-        Book a Free 30-Minute Consultation
-    </h2>
+    <!--=========================
+            LEFT SIDE
+    ==========================-->
 
-    <p class="appointment-sub">
-        Fill in your details and receive expert financial guidance
-        tailored to your goals. 100% Free Consultation with a
-        quick response from our advisor.
-    </p>
+    <div class="hero-left">
 
-    <div class="appointment-container">
+        <span class="hero-badge">
 
-        <!--=========================
-                LEFT SIDE
-        ==========================-->
+            Trusted Financial Advisor | Bhubaneswar
 
-        <div class="appointment-left">
+        </span>
 
-            <!-- Premium Icon -->
+        <h1>
 
-           <div class="appointment-icon">
+            Secure Your Future with
+            Smart Financial Planning
 
-    <img src="appnt.png" alt="Book Consultation">
+        </h1>
 
-</div>
+        <p class="hero-sub">
 
-            <h3>
+            Hi, I'm <strong>Soumyakanta Sahoo</strong>.
+            I help individuals and families achieve financial
+            security through wealth creation, tax-saving
+            strategies, retirement planning and complete
+            insurance solutions.
 
-                Why Book This Consultation?
+        </p>
 
-            </h3>
+        <ul class="hero-points">
 
-            <!-- Decorative Divider -->
+            <li>
 
-            <div class="appointment-divider"></div>
+                <i class="fa-solid fa-circle-check"></i>
 
-            <ul>
+                Build Long-Term Wealth
 
-                <li>
+            </li>
 
-                    <i class="fa-solid fa-circle-check"></i>
+            <li>
 
-                    100% Free Financial Consultation
+                <i class="fa-solid fa-circle-check"></i>
 
-                </li>
+                Save More Tax Every Year
 
-                <li>
+            </li>
 
-                    <i class="fa-solid fa-circle-check"></i>
+            <li>
 
-                    Personalized Financial Plan For Your Goals
+                <i class="fa-solid fa-circle-check"></i>
 
-                </li>
+                Protect Your Family's Future
 
-                <li>
+            </li>
 
-                    <i class="fa-solid fa-circle-check"></i>
+        </ul>
 
-                    Quick Call Back Within 6 Hours
+        <div class="hero-buttons">
 
-                </li>
+            <a href="#appointment"
+               class="btn primary">
 
-                <li>
+                Book Free Consultation
 
-                    <i class="fa-solid fa-circle-check"></i>
+            </a>
 
-                    Safe & Secure Information
+            <a href="https://wa.me/917008450300"
+               target="_blank"
+               class="btn whatsapp">
 
-                </li>
+                <i class="fa-brands fa-whatsapp"></i>
 
-            </ul>
+                &nbsp;WhatsApp Now
 
-        </div>
-
-        <!--=========================
-                RIGHT SIDE
-        ==========================-->
-
-        <div class="appointment-right">
-
-            <input
-                type="text"
-                id="app-name"
-                placeholder="Full Name"
-            >
-
-            <input
-                type="text"
-                id="app-phone"
-                placeholder="Mobile Number"
-            >
-
-            <input
-                type="email"
-                id="app-email"
-                placeholder="Email Address"
-            >
-
-            <textarea
-                id="app-msg"
-                placeholder="Tell us about your financial goals..."
-            ></textarea>
-
-            <button onclick="sendAppointment()">
-
-                Get My Free Plan
-
-            </button>
-
-            <p class="trust-line">
-
-                <i class="fa-solid fa-shield-halved"></i>
-
-                Your information is 100% secure |
-                No spam |
-                No obligations.
-
-            </p>
-            <div class="appointment-brand">
-
-    <img src="logo.png" alt="Aditya Birla Sun Life Insurance">
-
-</div>
+            </a>
 
         </div>
+
+        <p class="hero-trust">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            Trusted Advisor |
+            Personalized Planning |
+            Fast Response
+
+        </p>
+
+    </div>
+
+    <!--=========================
+        PREMIUM DIVIDER
+    ==========================-->
+
+    <div class="hero-divider"></div>
+
+    <!--=========================
+            RIGHT SIDE
+    ==========================-->
+
+    <div class="hero-right">
+
+        <img
+            src="ssphoto.png"
+            alt="Soumyakanta Sahoo">
 
     </div>
 
 </section>
-<!-- FOOTER -->
-<footer class="footer">
 
-<div class="footer-container">
+<!-- Premium Animated Divider -->
 
-<!-- LEFT -->
-<div class="footer-left">
-<h3>Soumyakanta Sahoo</h3>
-<p>Financial Advisor</p>
-
-<p>📍 Uttara | Branch: Puri (093)</p>
-<p>📞 7008450300</p>
-<p>✉️ soumyakantaindia@gmail.com</p>
-</div>
-
-<!-- MIDDLE -->
-<div class="footer-middle">
-<h4>Quick Links</h4>
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#appointment">Contact</a></li>
-</ul>
-</div>
-
-<!-- RIGHT -->
-<div class="footer-right">
-<h4>Legal</h4>
-<ul>
-<li><a href="privacy.html">Privacy Policy</a></li>
-<li><a href="terms.html">Terms & Conditions</a></li>
-</ul>
-
-<p class="footer-note">
-This website is for informational purposes only and does not constitute financial advice.
-</p>
-</div>
-
-</div>
-
-<!-- BOTTOM -->
-<div class="footer-bottom">
-<p>© 2026 Monalisha Panda | All Rights Reserved</p>
-</div>
-
-</footer>
+<div class="section-divider"></div>
+    
