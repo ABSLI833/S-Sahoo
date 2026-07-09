@@ -163,7 +163,102 @@ background:rgba(6,19,37,.95);
 backdrop-filter:blur(18px);
 z-index:9999;
 }
+/*==================================
+    HEADER BOTTOM ANIMATED LINE
+==================================*/
 
+nav::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-2px;
+
+width:100%;
+
+height:3px;
+
+background:linear-gradient(
+90deg,
+#D62D2D 0%,
+#F4B400 50%,
+#D62D2D 100%
+);
+
+background-size:250% 100%;
+
+animation:headerGradient 5s linear infinite;
+
+box-shadow:
+0 0 8px rgba(244,180,0,.6);
+
+overflow:hidden;
+
+}
+
+nav::before{
+
+content:"";
+
+position:absolute;
+
+left:-20%;
+
+bottom:-2px;
+
+width:20%;
+
+height:3px;
+
+background:linear-gradient(
+90deg,
+transparent,
+#ffffff,
+transparent
+);
+
+filter:blur(1px);
+
+animation:headerLight 2.5s linear infinite;
+
+z-index:2;
+
+}
+
+@keyframes headerGradient{
+
+from{
+
+background-position:0%;
+
+}
+
+to{
+
+background-position:250%;
+
+}
+
+}
+
+@keyframes headerLight{
+
+from{
+
+left:-20%;
+
+}
+
+to{
+
+left:120%;
+
+}
+
+}
 /* GOLDEN TOP GLOW */
 
 nav::before{
@@ -1548,8 +1643,6 @@ alt="WhatsApp">
     </div>
 
 </nav>
-
-<div class="header-divider"></div>
 
 <!--====================================================
                     HERO SECTION
