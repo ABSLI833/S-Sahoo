@@ -462,15 +462,15 @@ font-size:13px;
 
 .hero{
 
-display:flex;
+display:grid;
 
-align-items:flex-start;
+grid-template-columns:1fr 12px 520px;
 
-padding-top:100px;
+align-items:start;
 
-padding-bottom:35px;
+column-gap:30px;
 
-min-height:auto;
+padding:100px 5% 40px;
 
 background:linear-gradient(
 135deg,
@@ -479,37 +479,9 @@ background:linear-gradient(
 #0B2240 100%
 );
 
-overflow:hidden;
-
 position:relative;
 
-}
-
-/* PREMIUM BACKGROUND LIGHT */
-
-.hero::before{
-
-content:"";
-
-position:absolute;
-
-width:600px;
-
-height:600px;
-
-top:-220px;
-
-left:-220px;
-
-background:radial-gradient(
-circle,
-rgba(244,180,0,.10),
-transparent 70%
-);
-
-pointer-events:none;
-
-animation:heroGlow 8s ease-in-out infinite;
+overflow:hidden;
 
 }
 
@@ -585,25 +557,13 @@ opacity:.9;
 
 .hero-left{
 
-width:58%;
+padding-top:10px;
 
-padding:40px 5% 30px;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:flex-start;
-
-align-items:flex-start;
-
-color:#fff;
+padding-right:15px;
 
 animation:fadeInLeft 1s ease forwards;
 
 opacity:0;
-
-z-index:2;
 
 }
 .hero-badge{
@@ -809,33 +769,29 @@ background-position:0% 250%;
 
 .hero-right{
 
-width:45%;
+display:flex;
+
+justify-content:flex-end;
+
+align-items:flex-start;
 
 animation:fadeInRight 1.2s ease forwards;
 
 opacity:0;
 
-overflow:hidden;
-
-position:relative;
-
 }
 
 .hero-right img{
 
-width:100%;
-
-max-width:520px;
+width:520px;
 
 height:620px;
 
 object-fit:cover;
 
-border-radius:18px;
+border-radius:20px;
 
 display:block;
-
-transition:.5s;
 
 }
 
