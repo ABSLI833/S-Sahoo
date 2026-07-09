@@ -150,35 +150,18 @@ line-height:1.8;
 =====================================================*/
 
 nav{
-
 position:fixed;
-
 top:0;
 left:0;
-
 width:100%;
-
-padding:10px 5%;
-min-height:88px;;
-
+height:78px;
+padding:0 5%;
 display:flex;
-
 justify-content:space-between;
-
 align-items:center;
-
-background:rgba(6,19,37,.90);
-
+background:rgba(6,19,37,.95);
 backdrop-filter:blur(18px);
-
--webkit-backdrop-filter:blur(18px);
-
-border-bottom:1px solid rgba(255,255,255,.08);
-
 z-index:9999;
-
-transition:.35s;
-
 }
 
 /* GOLDEN TOP GLOW */
@@ -231,42 +214,28 @@ background-position:250%;
 ==================================*/
 
 .logo-box{
-
 display:flex;
-
 align-items:center;
-
-gap:14px;
-
-z-index:2;
-
+gap:12px;
+flex-shrink:0;
 }
 
 .logo-box img{
-
-height:68px;
-width:auto;
 display:block;
-transition:.35s;
-
-}
-
-.logo-box:hover img{
-
-transform:rotate(-5deg) scale(1.05);
-
+height:60px;
+width:auto;
+max-height:none;
+max-width:none;
+object-fit:contain;
 }
 
 .logo-box h2{
-
-font-size:28px;
-
-color:#ffffff;
-
-letter-spacing:.3px;
-
-transition:.35s;
-
+font-family:'Playfair Display',serif;
+font-size:24px;
+font-weight:700;
+color:#fff;
+margin:0;
+line-height:1;
 }
 
 .logo-box:hover h2{
