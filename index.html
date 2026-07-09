@@ -2487,6 +2487,472 @@ font-weight:600;
 cursor:pointer;
 
 }
+        /*=====================================================
+                TESTIMONIALS SECTION
+=====================================================*/
+
+.testimonials-section{
+
+padding:70px 5%;
+
+background:var(--bg-main);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.testimonials-heading{
+
+text-align:center;
+
+max-width:850px;
+
+margin:0 auto 60px;
+
+}
+
+.testimonials-heading h2{
+
+font-size:46px;
+
+margin:18px 0;
+
+color:#ffffff;
+
+line-height:1.25;
+
+display:inline-block;
+
+position:relative;
+
+}
+
+.testimonials-heading h2::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+bottom:-14px;
+
+transform:translateX(-50%);
+
+width:90px;
+
+height:4px;
+
+border-radius:10px;
+
+background:linear-gradient(
+90deg,
+#D62D2D,
+#F4B400
+);
+
+}
+
+.testimonials-heading p{
+
+font-size:17px;
+
+color:#D7E2F2;
+
+line-height:1.8;
+
+}
+
+/*==============================
+        GRID
+==============================*/
+
+.testimonial-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+}
+
+/*==============================
+        CARD
+==============================*/
+
+.testimonial-card{
+
+background:#0B1F39;
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:22px;
+
+padding:35px 30px;
+
+position:relative;
+
+overflow:hidden;
+
+transition:.45s;
+
+box-shadow:0 18px 45px rgba(0,0,0,.30);
+
+}
+
+.testimonial-card::before{
+
+content:"";
+
+position:absolute;
+
+left:-100%;
+
+top:0;
+
+width:60%;
+
+height:3px;
+
+background:linear-gradient(
+90deg,
+transparent,
+#F4B400,
+transparent
+);
+
+animation:cardLight 5s linear infinite;
+
+}
+
+.testimonial-card:hover{
+
+transform:translateY(-10px);
+
+border-color:rgba(244,180,0,.25);
+
+box-shadow:
+
+0 28px 60px rgba(0,0,0,.40),
+
+0 0 18px rgba(244,180,0,.12);
+
+}
+
+/*==============================
+        QUOTE
+==============================*/
+
+.quote-icon{
+
+width:70px;
+
+height:70px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+margin-bottom:25px;
+
+background:linear-gradient(
+135deg,
+#D62D2D,
+#F4B400
+);
+
+}
+
+.quote-icon i{
+
+font-size:28px;
+
+color:#fff;
+
+}
+
+.testimonial-card p{
+
+font-size:15px;
+
+line-height:1.9;
+
+color:#D7E2F2;
+
+margin-bottom:25px;
+
+min-height:125px;
+
+}
+
+/*==============================
+        STARS
+==============================*/
+
+.stars{
+
+font-size:20px;
+
+letter-spacing:3px;
+
+color:#F4B400;
+
+margin-bottom:18px;
+
+}
+
+/*==============================
+        CLIENT
+==============================*/
+
+.testimonial-card h3{
+
+font-size:24px;
+
+color:#ffffff;
+
+margin-bottom:6px;
+
+}
+
+.testimonial-card span{
+
+font-size:14px;
+
+color:#F4B400;
+
+display:block;
+
+}
+
+/*==============================
+        GLOW
+==============================*/
+
+.testimonials-section::before{
+
+content:"";
+
+position:absolute;
+
+left:-220px;
+
+top:-160px;
+
+width:520px;
+
+height:520px;
+
+background:radial-gradient(
+
+circle,
+
+rgba(244,180,0,.07),
+
+transparent 70%
+
+);
+
+animation:serviceGlow1 10s ease-in-out infinite;
+
+pointer-events:none;
+
+}
+
+.testimonials-section::after{
+
+content:"";
+
+position:absolute;
+
+right:-180px;
+
+bottom:-120px;
+
+width:420px;
+
+height:420px;
+
+background:radial-gradient(
+
+circle,
+
+rgba(214,45,45,.08),
+
+transparent 70%
+
+);
+
+animation:serviceGlow2 10s ease-in-out infinite;
+
+pointer-events:none;
+
+}
+        /*=====================================================
+        TESTIMONIALS PREMIUM EFFECTS
+=====================================================*/
+
+/* Card Shine */
+
+.testimonial-card::after{
+
+content:"";
+
+position:absolute;
+
+left:-120%;
+
+top:0;
+
+width:60%;
+
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.12),
+transparent
+);
+
+transform:skewX(-25deg);
+
+}
+
+.testimonial-card:hover::after{
+
+animation:testimonialShine .9s linear;
+
+}
+
+@keyframes testimonialShine{
+
+0%{
+
+left:-120%;
+
+}
+
+100%{
+
+left:170%;
+
+}
+
+}
+
+/* Quote Animation */
+
+.quote-icon{
+
+transition:.45s;
+
+}
+
+.testimonial-card:hover .quote-icon{
+
+transform:rotate(-12deg) scale(1.08);
+
+box-shadow:
+
+0 12px 30px rgba(244,180,0,.35);
+
+}
+
+/* Stars */
+
+.stars{
+
+transition:.35s;
+
+}
+
+.testimonial-card:hover .stars{
+
+letter-spacing:5px;
+
+}
+
+/* Name */
+
+.testimonial-card h3{
+
+transition:.35s;
+
+}
+
+.testimonial-card:hover h3{
+
+color:#F4B400;
+
+}
+
+/* Paragraph */
+
+.testimonial-card p{
+
+transition:.35s;
+
+}
+
+.testimonial-card:hover p{
+
+color:#ffffff;
+
+}
+
+/* Floating Animation */
+
+.testimonial-card:nth-child(odd){
+
+animation:testimonialFloat 6s ease-in-out infinite;
+
+}
+
+.testimonial-card:nth-child(even){
+
+animation:testimonialFloat2 7s ease-in-out infinite;
+
+}
+
+@keyframes testimonialFloat{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-6px);
+
+}
+
+}
+
+@keyframes testimonialFloat2{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(6px);
+
+}
+
+}
 
 /*=====================================================
         PREMIUM TEXT SELECTION
@@ -3054,6 +3520,267 @@ alt="WhatsApp">
 
             </button>
                 <div class="bottom-line"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="section-divider"></div>
+            <!--====================================================
+                TESTIMONIALS SECTION
+=====================================================-->
+
+<section id="testimonials" class="testimonials-section">
+
+    <div class="testimonials-heading">
+
+        <span class="section-tag">
+
+            CLIENT TESTIMONIALS
+
+        </span>
+
+        <h2>
+
+            What My Clients
+            Say About Me
+
+        </h2>
+
+        <p>
+
+            Helping individuals and families achieve financial confidence
+            through trusted advice and personalized financial planning.
+
+        </p>
+
+    </div>
+
+    <div class="testimonial-grid">
+
+        <!-- Testimonial 1 -->
+
+        <div class="testimonial-card">
+
+            <div class="quote-icon">
+
+                <i class="fa-solid fa-quote-left"></i>
+
+            </div>
+
+            <p>
+
+                Soumyakanta explained every financial option patiently and
+                helped me choose the right investment plan. The entire
+                process was simple and transparent.
+
+            </p>
+
+            <div class="stars">
+
+                ★★★★★
+
+            </div>
+
+            <h3>
+
+                Amit Mishra
+
+            </h3>
+
+            <span>
+
+                Business Owner
+
+            </span>
+
+        </div>
+
+        <!-- Testimonial 2 -->
+
+        <div class="testimonial-card">
+
+            <div class="quote-icon">
+
+                <i class="fa-solid fa-quote-left"></i>
+
+            </div>
+
+            <p>
+
+                I wanted to save tax while building wealth. His guidance
+                helped me choose a plan that perfectly matched my goals.
+
+            </p>
+
+            <div class="stars">
+
+                ★★★★★
+
+            </div>
+
+            <h3>
+
+                Priya Das
+
+            </h3>
+
+            <span>
+
+                IT Professional
+
+            </span>
+
+        </div>
+
+        <!-- Testimonial 3 -->
+
+        <div class="testimonial-card">
+
+            <div class="quote-icon">
+
+                <i class="fa-solid fa-quote-left"></i>
+
+            </div>
+
+            <p>
+
+                Excellent support from beginning to end. Every question
+                was answered quickly and professionally. Highly
+                recommended.
+
+            </p>
+
+            <div class="stars">
+
+                ★★★★★
+
+            </div>
+
+            <h3>
+
+                Rajesh Kumar
+
+            </h3>
+
+            <span>
+
+                Government Employee
+
+            </span>
+
+        </div>
+
+        <!-- Testimonial 4 -->
+
+        <div class="testimonial-card">
+
+            <div class="quote-icon">
+
+                <i class="fa-solid fa-quote-left"></i>
+
+            </div>
+
+            <p>
+
+                The retirement planning session gave me complete clarity.
+                I now feel much more confident about my financial future.
+
+            </p>
+
+            <div class="stars">
+
+                ★★★★★
+
+            </div>
+
+            <h3>
+
+                Sneha Patnaik
+
+            </h3>
+
+            <span>
+
+                Teacher
+
+            </span>
+
+        </div>
+
+        <!-- Testimonial 5 -->
+
+        <div class="testimonial-card">
+
+            <div class="quote-icon">
+
+                <i class="fa-solid fa-quote-left"></i>
+
+            </div>
+
+            <p>
+
+                Professional advice, honest recommendations and quick
+                response. I truly appreciate the personalized guidance.
+
+            </p>
+
+            <div class="stars">
+
+                ★★★★★
+
+            </div>
+
+            <h3>
+
+                Abhishek Mohanty
+
+            </h3>
+
+            <span>
+
+                Entrepreneur
+
+            </span>
+
+        </div>
+
+        <!-- Testimonial 6 -->
+
+        <div class="testimonial-card">
+
+            <div class="quote-icon">
+
+                <i class="fa-solid fa-quote-left"></i>
+
+            </div>
+
+            <p>
+
+                Very satisfied with the financial planning experience.
+                Everything was explained clearly without any pressure.
+
+            </p>
+
+            <div class="stars">
+
+                ★★★★★
+
+            </div>
+
+            <h3>
+
+                Neha Sharma
+
+            </h3>
+
+            <span>
+
+                Working Professional
+
+            </span>
 
         </div>
 
