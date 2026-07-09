@@ -162,6 +162,7 @@ align-items:center;
 background:rgba(6,19,37,.95);
 backdrop-filter:blur(18px);
 z-index:9999;
+        overflow:hidden;
 }
 /*==================================
     HEADER BOTTOM ANIMATED LINE
@@ -175,11 +176,11 @@ position:absolute;
 
 left:0;
 
-bottom:-2px;
+bottom:-0px;
 
 width:100%;
 
-height:3px;
+height:4px;
 
 background:linear-gradient(
 90deg,
@@ -259,51 +260,6 @@ left:120%;
 }
 
 }
-/* GOLDEN TOP GLOW */
-
-nav::before{
-
-content:"";
-
-position:absolute;
-
-left:0;
-top:0;
-
-width:100%;
-height:2px;
-
-background:linear-gradient(
-90deg,
-transparent,
-#D62D2D,
-#F4B400,
-#D62D2D,
-transparent
-);
-
-background-size:250%;
-
-animation:navGlow 5s linear infinite;
-
-}
-
-@keyframes navGlow{
-
-0%{
-
-background-position:0%;
-
-}
-
-100%{
-
-background-position:250%;
-
-}
-
-}
-
 /*==================================
         LOGO
 ==================================*/
