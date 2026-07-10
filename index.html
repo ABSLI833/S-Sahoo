@@ -3946,6 +3946,656 @@ text-shadow:
 0 0 18px rgba(244,180,0,.35);
 
 }
+        /*=====================================================
+        APPOINTMENT SECTION
+=====================================================*/
+
+.appointment-section{
+
+padding:40px 5% 70px;
+
+background:var(--bg-main);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/*==============================
+        LAYOUT
+==============================*/
+
+.appointment-container{
+
+display:grid;
+
+grid-template-columns:1fr 500px;
+
+gap:60px;
+
+align-items:center;
+
+}
+
+/*==============================
+        LEFT CONTENT
+==============================*/
+
+.appointment-content h2{
+
+font-size:48px;
+
+color:#ffffff;
+
+line-height:1.25;
+
+margin:20px 0;
+
+position:relative;
+
+display:inline-block;
+
+}
+
+.appointment-content h2::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-14px;
+
+width:95px;
+
+height:4px;
+
+border-radius:10px;
+
+background:linear-gradient(
+90deg,
+#D62D2D,
+#F4B400
+);
+
+}
+
+.appointment-content p{
+
+font-size:17px;
+
+line-height:1.9;
+
+margin:35px 0;
+
+color:#D7E2F2;
+
+}
+
+/*==============================
+        POINTS
+==============================*/
+
+.appointment-points{
+
+display:flex;
+
+flex-direction:column;
+
+gap:18px;
+
+}
+
+.appoint-item{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+font-size:17px;
+
+font-weight:500;
+
+color:#ffffff;
+
+}
+
+.appoint-item i{
+
+font-size:20px;
+
+color:#F4B400;
+
+}
+
+/*==============================
+        FORM BOX
+==============================*/
+
+.appointment-form-box{
+
+background:#0B1F39;
+
+padding:42px;
+
+border-radius:24px;
+
+border:1px solid rgba(255,255,255,.08);
+
+box-shadow:
+
+0 25px 55px rgba(0,0,0,.35);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.appointment-form-box::before{
+
+content:"";
+
+position:absolute;
+
+left:-100%;
+
+top:0;
+
+width:60%;
+
+height:3px;
+
+background:linear-gradient(
+90deg,
+transparent,
+#F4B400,
+transparent
+);
+
+animation:cardLight 5s linear infinite;
+
+}
+
+.appointment-form-box h3{
+
+font-size:32px;
+
+margin-bottom:10px;
+
+color:#ffffff;
+
+}
+
+.appointment-form-box p{
+
+color:#D7E2F2;
+
+margin-bottom:30px;
+
+line-height:1.8;
+
+}
+
+/*==============================
+        FORM
+==============================*/
+
+#appointmentForm{
+
+display:flex;
+
+flex-direction:column;
+
+gap:18px;
+
+}
+
+#appointmentForm input,
+
+#appointmentForm select,
+
+#appointmentForm textarea{
+
+width:100%;
+
+padding:16px 18px;
+
+background:#07172E;
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:14px;
+
+color:#ffffff;
+
+font-size:15px;
+
+outline:none;
+
+transition:.35s;
+
+font-family:Poppins,sans-serif;
+
+}
+
+#appointmentForm input::placeholder,
+
+#appointmentForm textarea::placeholder{
+
+color:#A7B5C8;
+
+}
+
+#appointmentForm select{
+
+color:#A7B5C8;
+
+}
+
+#appointmentForm option{
+
+color:#000;
+
+}
+
+#appointmentForm input:focus,
+
+#appointmentForm select:focus,
+
+#appointmentForm textarea:focus{
+
+border-color:#F4B400;
+
+box-shadow:
+
+0 0 15px rgba(244,180,0,.15);
+
+}
+
+/*==============================
+        BUTTON
+==============================*/
+
+#appointmentForm button{
+
+margin-top:10px;
+
+width:100%;
+
+}
+
+/*==============================
+        BACKGROUND GLOW
+==============================*/
+
+.appointment-section::before{
+
+content:"";
+
+position:absolute;
+
+left:-220px;
+
+top:-150px;
+
+width:520px;
+
+height:520px;
+
+background:radial-gradient(
+
+circle,
+
+rgba(244,180,0,.07),
+
+transparent 70%
+
+);
+
+animation:serviceGlow1 10s ease-in-out infinite;
+
+pointer-events:none;
+
+}
+
+.appointment-section::after{
+
+content:"";
+
+position:absolute;
+
+right:-180px;
+
+bottom:-120px;
+
+width:420px;
+
+height:420px;
+
+background:radial-gradient(
+
+circle,
+
+rgba(214,45,45,.08),
+
+transparent 70%
+
+);
+
+animation:serviceGlow2 10s ease-in-out infinite;
+
+pointer-events:none;
+
+}
+        /*=====================================================
+        APPOINTMENT SUCCESS POPUP
+=====================================================*/
+
+.success-popup{
+
+position:fixed;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,.75);
+
+backdrop-filter:blur(8px);
+
+display:none;
+
+align-items:center;
+
+justify-content:center;
+
+z-index:99999;
+
+padding:20px;
+
+}
+
+.success-card{
+
+width:100%;
+
+max-width:520px;
+
+background:#0B1F39;
+
+padding:45px;
+
+border-radius:26px;
+
+text-align:center;
+
+border:1px solid rgba(244,180,0,.20);
+
+box-shadow:
+
+0 25px 60px rgba(0,0,0,.45),
+
+0 0 25px rgba(244,180,0,.15);
+
+animation:popupScale .35s ease;
+
+}
+
+.success-icon{
+
+font-size:70px;
+
+color:#2ECC71;
+
+margin-bottom:20px;
+
+}
+
+.success-card h2{
+
+font-size:34px;
+
+margin-bottom:18px;
+
+color:#ffffff;
+
+}
+
+.success-card p{
+
+color:#D7E2F2;
+
+line-height:1.9;
+
+margin-bottom:18px;
+
+}
+
+.success-card strong{
+
+color:#F4B400;
+
+}
+        /*=====================================================
+        APPOINTMENT PREMIUM EFFECTS
+=====================================================*/
+
+/* Premium Shine */
+
+.appointment-form-box::after{
+
+content:"";
+
+position:absolute;
+
+left:-120%;
+
+top:0;
+
+width:60%;
+
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.12),
+transparent
+);
+
+transform:skewX(-25deg);
+
+}
+
+.appointment-form-box:hover::after{
+
+animation:appointmentShine .9s linear;
+
+}
+
+@keyframes appointmentShine{
+
+0%{
+
+left:-120%;
+
+}
+
+100%{
+
+left:170%;
+
+}
+
+}
+
+/* Floating Form */
+
+.appointment-form-box{
+
+animation:appointmentFloat 7s ease-in-out infinite;
+
+}
+
+@keyframes appointmentFloat{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-6px);
+
+}
+
+}
+
+/* Premium Input Hover */
+
+#appointmentForm input:hover,
+
+#appointmentForm select:hover,
+
+#appointmentForm textarea:hover{
+
+border-color:rgba(244,180,0,.35);
+
+}
+
+/* Better Focus */
+
+#appointmentForm input:focus,
+
+#appointmentForm select:focus,
+
+#appointmentForm textarea:focus{
+
+transform:translateY(-2px);
+
+}
+
+/* Premium Tick Icons */
+
+.appoint-item{
+
+transition:.35s;
+
+}
+
+.appoint-item:hover{
+
+transform:translateX(10px);
+
+color:#F4B400;
+
+}
+
+.appoint-item i{
+
+transition:.35s;
+
+}
+
+.appoint-item:hover i{
+
+transform:scale(1.2);
+
+}
+
+/* Button */
+
+#appointmentForm button{
+
+transition:.4s;
+
+}
+
+#appointmentForm button:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+
+0 15px 35px rgba(244,180,0,.30);
+
+}
+
+/* Success Popup */
+
+.success-card{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.success-card::before{
+
+content:"";
+
+position:absolute;
+
+left:-120%;
+
+top:0;
+
+width:60%;
+
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.15),
+transparent
+);
+
+transform:skewX(-25deg);
+
+}
+
+.success-card:hover::before{
+
+animation:appointmentShine .9s linear;
+
+}
+
+/* Success Icon */
+
+.success-icon{
+
+animation:successPulse 2s infinite;
+
+}
+
+@keyframes successPulse{
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+}
 
 /*=====================================================
         PREMIUM TEXT SELECTION
@@ -5067,6 +5717,230 @@ alt="WhatsApp">
 </section>
 
 <div class="section-divider"></div>
+            <!--====================================================
+        BOOK FREE CONSULTATION
+=====================================================-->
+
+<section id="appointment" class="appointment-section">
+
+    <div class="appointment-container">
+
+        <!--=========================
+                LEFT CONTENT
+        =========================-->
+
+        <div class="appointment-content">
+
+            <span class="section-tag">
+
+                FREE CONSULTATION
+
+            </span>
+
+            <h2>
+
+                Book Your Free
+                Financial Consultation
+
+            </h2>
+
+            <p>
+
+                Whether you're planning for wealth creation, tax saving,
+                retirement, child education or family protection,
+                schedule a free consultation and receive personalized
+                financial guidance from Soumyakanta Sahoo.
+
+            </p>
+
+            <div class="appointment-points">
+
+                <div class="appoint-item">
+
+                    <i class="fas fa-check-circle"></i>
+
+                    <span>100% Free Financial Consultation</span>
+
+                </div>
+
+                <div class="appoint-item">
+
+                    <i class="fas fa-check-circle"></i>
+
+                    <span>Personalized Financial Planning</span>
+
+                </div>
+
+                <div class="appoint-item">
+
+                    <i class="fas fa-check-circle"></i>
+
+                    <span>Investment & Insurance Guidance</span>
+
+                </div>
+
+                <div class="appoint-item">
+
+                    <i class="fas fa-check-circle"></i>
+
+                    <span>Quick WhatsApp Response</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--=========================
+                RIGHT FORM
+        =========================-->
+
+        <div class="appointment-form-box">
+
+            <h3>
+
+                Schedule Your Consultation
+
+            </h3>
+
+            <p>
+
+                Fill in your details and we'll contact you shortly.
+
+            </p>
+
+            <form id="appointmentForm" onsubmit="submitAppointment(event)">
+
+                <input
+                type="text"
+                id="name"
+                placeholder="Full Name"
+                required>
+
+                <input
+                type="tel"
+                id="mobile"
+                placeholder="Mobile Number"
+                required>
+
+                <input
+                type="email"
+                id="email"
+                placeholder="Email Address">
+
+                <input
+                type="text"
+                id="city"
+                placeholder="City">
+
+                <select id="service">
+
+                    <option value="">
+
+                        Select Consultation Type
+
+                    </option>
+
+                    <option>
+
+                        Wealth Creation
+
+                    </option>
+
+                    <option>
+
+                        Tax Saving
+
+                    </option>
+
+                    <option>
+
+                        Retirement Planning
+
+                    </option>
+
+                    <option>
+
+                        Child Education Planning
+
+                    </option>
+
+                    <option>
+
+                        Family Protection
+
+                    </option>
+
+                </select>
+
+                <textarea
+                id="message"
+                rows="5"
+                placeholder="Tell us about your financial goals..."></textarea>
+
+                <button type="submit"
+                class="btn primary">
+
+                    Book Free Consultation
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="section-divider"></div>
+            <!--====================================================
+        APPOINTMENT SUCCESS POPUP
+=====================================================-->
+
+<div id="appointmentSuccess" class="success-popup">
+
+    <div class="success-card">
+
+        <div class="success-icon">
+
+            <i class="fas fa-circle-check"></i>
+
+        </div>
+
+        <h2>
+
+            Request Submitted Successfully!
+
+        </h2>
+
+        <p>
+
+            Thank you for choosing
+            <strong>Soumyakanta Sahoo</strong>.
+
+        </p>
+
+        <p>
+
+            Your consultation request has been received successfully.
+
+            Our team will contact you within
+            <strong>6 Hours</strong> with your personalized
+            financial consultation.
+
+        </p>
+
+        <button onclick="closeAppointmentSuccess()"
+        class="btn primary">
+
+            Continue
+
+        </button>
+
+    </div>
+
+</div>
 
             <!--====================================================
                 SERVICE POPUP
@@ -5218,6 +6092,110 @@ closeForm();
 
 }
                     </script>
+            <script>
+
+const appointmentScriptURL = "YOUR_GOOGLE_APPS_SCRIPT_URL";
+
+async function submitAppointment(event){
+
+event.preventDefault();
+
+const name=document.getElementById("name").value.trim();
+
+const mobile=document.getElementById("mobile").value.trim();
+
+const email=document.getElementById("email").value.trim();
+
+const city=document.getElementById("city").value.trim();
+
+const service=document.getElementById("service").value;
+
+const message=document.getElementById("message").value.trim();
+
+const data={
+
+name:name,
+
+mobile:mobile,
+
+email:email,
+
+city:city,
+
+service:service,
+
+message:message,
+
+source:"Website Appointment"
+
+};
+
+try{
+
+await fetch(appointmentScriptURL,{
+
+method:"POST",
+
+mode:"no-cors",
+
+headers:{
+
+"Content-Type":"application/json"
+
+},
+
+body:JSON.stringify(data)
+
+});
+
+}catch(err){
+
+console.log(err);
+
+}
+
+const whatsappMessage=
+
+`*New Appointment Request*%0A%0A`
+
++`👤 Name : ${name}%0A`
+
++`📞 Mobile : ${mobile}%0A`
+
++`📧 Email : ${email}%0A`
+
++`🏙 City : ${city}%0A`
+
++`📋 Consultation : ${service}%0A`
+
++`📝 Goal : ${message}`;
+
+window.open(
+
+`https://wa.me/917008450300?text=${whatsappMessage}`,
+
+"_blank"
+
+);
+
+showAppointmentSuccess();
+
+document.getElementById("appointmentForm").reset();
+
+}
+                    function showAppointmentSuccess(){
+
+document.getElementById("appointmentSuccess").style.display="flex";
+
+}
+
+function closeAppointmentSuccess(){
+
+document.getElementById("appointmentSuccess").style.display="none";
+
+}
+
+</script>
 
 </body>
 
