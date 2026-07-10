@@ -5513,7 +5513,9 @@ height:72px;
 
 .logo-box{
 
-flex:1;
+flex:unset;
+
+max-width:260px;
 
 }
 
@@ -5537,15 +5539,33 @@ text-overflow:ellipsis;
 
 .mobile-menu-btn{
 
-position:absolute;
+display:flex;
+
+position:fixed;
+
+top:13px;
 
 right:18px;
 
-top:50%;
+width:46px;
 
-transform:translateY(-50%);
+height:46px;
+
+align-items:center;
+
+justify-content:center;
+
+border-radius:12px;
+
+background:linear-gradient(135deg,#F4B400,#FFD84D);
+
+color:#061325;
+
+font-size:22px;
 
 z-index:10001;
+
+box-shadow:0 10px 25px rgba(244,180,0,.30);
 
 }
 
@@ -6725,8 +6745,6 @@ alt="WhatsApp">
 </div>
 
 <!-- MOBILE MENU END -->
-
-<section id="home" class="hero">
 
 <!--====================================================
                     HERO SECTION
