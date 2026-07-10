@@ -5294,6 +5294,117 @@ html{
 scroll-behavior:smooth;
 
 }
+        /*=====================================================
+                MOBILE MENU
+=====================================================*/
+
+.mobile-menu-btn{
+
+display:none;
+
+width:46px;
+
+height:46px;
+
+border-radius:12px;
+
+background:linear-gradient(135deg,#F4B400,#FFDE59);
+
+color:#061325;
+
+font-size:22px;
+
+cursor:pointer;
+
+align-items:center;
+
+justify-content:center;
+
+box-shadow:0 10px 25px rgba(244,180,0,.25);
+
+transition:.35s;
+
+}
+
+.mobile-menu-btn:hover{
+
+transform:scale(1.05);
+
+}
+
+.mobile-menu{
+
+position:fixed;
+
+top:72px;
+
+left:0;
+
+width:100%;
+
+background:#0B1E3A;
+
+display:none;
+
+flex-direction:column;
+
+padding:20px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+z-index:9998;
+
+}
+
+.mobile-menu a{
+
+color:#fff;
+
+text-decoration:none;
+
+padding:14px 10px;
+
+font-size:17px;
+
+font-weight:600;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+transition:.3s;
+
+}
+
+.mobile-menu a:hover{
+
+color:#F4B400;
+
+padding-left:18px;
+
+}
+
+.mobile-book-btn{
+
+margin-top:18px;
+
+text-align:center;
+
+background:linear-gradient(135deg,#F4B400,#FFD95A);
+
+color:#061325 !important;
+
+border-radius:40px;
+
+border:none !important;
+
+padding:14px;
+
+}
+
+.mobile-menu.active{
+
+display:flex;
+
+}
 
 /*=====================================================
         PREMIUM TEXT SELECTION
@@ -5359,6 +5470,115 @@ font-size:13px;
 padding:10px 18px;
 
 font-size:13px;
+
+}
+        .menu{
+
+display:none;
+
+}
+
+.mobile-menu-btn{
+
+display:flex;
+
+}
+
+.logo-box h2{
+
+font-size:16px;
+
+}
+
+.book-btn{
+
+display:none;
+
+}
+        /*=========================================
+        MH-4 FINAL HEADER
+=========================================*/
+
+nav{
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:0 18px;
+
+height:72px;
+
+}
+
+.logo-box{
+
+flex:1;
+
+}
+
+.logo-box img{
+
+height:42px;
+
+}
+
+.logo-box h2{
+
+font-size:15px;
+
+white-space:nowrap;
+
+overflow:hidden;
+
+text-overflow:ellipsis;
+
+}
+
+.mobile-menu-btn{
+
+position:absolute;
+
+right:18px;
+
+top:50%;
+
+transform:translateY(-50%);
+
+z-index:10001;
+
+}
+
+.mobile-menu{
+
+top:72px;
+
+animation:mobileMenu .35s ease;
+
+}
+
+@keyframes mobileMenu{
+
+from{
+
+opacity:0;
+
+transform:translateY(-20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+        body.menu-open{
+
+overflow:hidden;
 
 }
 
@@ -6470,8 +6690,43 @@ alt="WhatsApp">
         </a>
 
     </div>
+            </nav>
 
-</nav>
+<!-- MOBILE MENU START -->
+
+<div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+    <i class="fas fa-bars"></i>
+</div>
+
+<div id="mobileMenu" class="mobile-menu">
+
+    <a href="#home" onclick="toggleMobileMenu()">Home</a>
+
+    <a href="#about" onclick="toggleMobileMenu()">About</a>
+
+    <a href="#services" onclick="toggleMobileMenu()">Services</a>
+
+    <a href="#testimonials" onclick="toggleMobileMenu()">Testimonials</a>
+
+    <a href="#why" onclick="toggleMobileMenu()">Why Choose</a>
+
+    <a href="#leadership" onclick="toggleMobileMenu()">Leadership</a>
+
+    <a href="#appointment" onclick="toggleMobileMenu()">Appointment</a>
+
+    <a href="#appointment"
+       class="mobile-book-btn"
+       onclick="toggleMobileMenu()">
+
+       Book Appointment
+
+    </a>
+
+</div>
+
+<!-- MOBILE MENU END -->
+
+<section id="home" class="hero">
 
 <!--====================================================
                     HERO SECTION
@@ -8216,6 +8471,31 @@ function closeAppointmentSuccess(){
 document.getElementById("appointmentSuccess").style.display="none";
 
 }
+                    /*=========================================
+        MOBILE MENU
+=========================================*/
+
+function toggleMobileMenu(){
+
+const menu=document.getElementById("mobileMenu");
+
+menu.classList.toggle("active");
+
+document.body.classList.toggle("menu-open");
+
+}
+
+// Close menu after window becomes desktop size
+
+window.addEventListener("resize",function(){
+
+if(window.innerWidth>768){
+
+document.getElementById("mobileMenu").classList.remove("active");
+
+}
+
+});
 
 </script>
 
