@@ -8262,36 +8262,36 @@ Terms & Conditions
 
         <input
         type="text"
-        id="name"
+        id="popupName"
         placeholder="Full Name">
 
         <input
         type="tel"
-        id="phone"
+        id="popupPhone"
         placeholder="Mobile / WhatsApp Number">
 
         <input
         type="number"
-        id="age"
+        id="popupAge"
         placeholder="Age">
 
         <input
         type="text"
-        id="occupation"
+        id="popupOccupation"
         placeholder="Occupation">
 
         <input
         type="text"
-        id="income"
+        id="popupIncome"
         placeholder="Monthly Income">
 
         <input
         type="text"
-        id="city"
+        id="popupCity"
         placeholder="City">
 
         <textarea
-        id="message"
+        id="popupMessage"
         rows="4"
         placeholder="Additional Requirement (Optional)"></textarea>
 
@@ -8323,13 +8323,13 @@ function closeForm(){
 
 function sendWhatsApp(){
 
-    let name = document.getElementById("name").value.trim();
-    let phone = document.getElementById("phone").value.trim();
-    let age = document.getElementById("age").value.trim();
-    let occupation = document.getElementById("occupation").value.trim();
-    let income = document.getElementById("income").value.trim();
-    let city = document.getElementById("city").value.trim();
-    let message = document.getElementById("message").value.trim();
+    let name = document.getElementById("popupName").value.trim();
+    let phone = document.getElementById("popupPhone").value.trim();
+    let age = document.getElementById("popupAge").value.trim();
+    let occupation = document.getElementById("popupOccupation").value.trim();
+    let income = document.getElementById("popupIncome").value.trim();
+    let city = document.getElementById("popupCity").value.trim();
+    let message = document.getElementById("popupMessage").value.trim();
 
     if(name === "" || phone === ""){
 
@@ -8359,7 +8359,6 @@ ${message}`;
 
     window.location.href = whatsappURL;
 }
-
 </script>
             <script>
 
