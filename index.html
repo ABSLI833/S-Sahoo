@@ -7087,11 +7087,9 @@ alt="WhatsApp">
 
             </p>
 
-            <button>
-
-                Know Details
-
-            </button>
+         <button>
+    Know Details
+</button>
                 <div class="bottom-line"></div>
 
         </div>
@@ -8380,13 +8378,11 @@ ${selectedService}
 📝 Requirement:
 ${message}`;
 
-window.open(
+ const whatsappURL =
+        `https://wa.me/917008450300?text=${encodeURIComponent(text)}`;
 
-`https://wa.me/917008450300?text=${encodeURIComponent(text)}`,
-
-"_blank"
-
-);
+    window.location.href = whatsappURL;
+}
         alert(
 "✅ Your request has been submitted successfully.\n\nYou will receive a personalized financial plan along with a consultation call within 6 hours."
 );
