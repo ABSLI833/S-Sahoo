@@ -7118,11 +7118,9 @@ alt="WhatsApp">
 
             </p>
 
-            <button>
-
-                Know Details
-
-            </button>
+            <button type="button" onclick="openForm('Investment Planning')">
+    Know Details
+</button>
                 <div class="bottom-line"></div>
 
         </div>
@@ -7151,11 +7149,9 @@ alt="WhatsApp">
 
             </p>
 
-            <button>
-
-                Know Details
-
-            </button>
+            <button type="button" onclick="openForm('Life Insurance')">
+    Know Details
+</button>
                 <div class="bottom-line"></div>
 
         </div>
@@ -7184,11 +7180,9 @@ alt="WhatsApp">
 
             </p>
 
-            <button>
-
-                Know Details
-
-            </button>
+            <button type="button" onclick="openForm('Retirement Planning')">
+    Know Details
+</button>
                 <div class="bottom-line"></div>
 
         </div>
@@ -7217,11 +7211,9 @@ alt="WhatsApp">
 
             </p>
 
-            <button>
-
-                Know Details
-
-            </button>
+           <button type="button" onclick="openForm('Tax Saving')">
+    Know Details
+</button>
                 <div class="bottom-line"></div>
 
         </div>
@@ -7250,11 +7242,9 @@ alt="WhatsApp">
 
             </p>
 
-            <button>
-
-                Know Details
-
-            </button>
+           <button type="button" onclick="openForm('Family Financial Protection')">
+    Know Details
+</button>
                 <div class="bottom-line"></div>
 
         </div>
@@ -8315,61 +8305,47 @@ Terms & Conditions
     </div>
 
 </div>
-            <script>
-                    let selectedService="";
+         <script>
+
+let selectedService = "";
 
 function openForm(service){
 
-selectedService=service;
+    selectedService = service;
 
-document.getElementById("popupForm").style.display="flex";
-
+    document.getElementById("popupForm").style.display = "flex";
 }
 
 function closeForm(){
 
-document.getElementById("popupForm").style.display="none";
-
+    document.getElementById("popupForm").style.display = "none";
 }
 
 function sendWhatsApp(){
 
-let name=document.getElementById("name").value.trim();
+    let name = document.getElementById("name").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let age = document.getElementById("age").value.trim();
+    let occupation = document.getElementById("occupation").value.trim();
+    let income = document.getElementById("income").value.trim();
+    let city = document.getElementById("city").value.trim();
+    let message = document.getElementById("message").value.trim();
 
-let phone=document.getElementById("phone").value.trim();
+    if(name === "" || phone === ""){
 
-let age=document.getElementById("age").value.trim();
+        alert("Please enter your Name and Mobile Number.");
 
-let occupation=document.getElementById("occupation").value.trim();
+        return;
+    }
 
-let income=document.getElementById("income").value.trim();
-
-let city=document.getElementById("city").value.trim();
-
-let message=document.getElementById("message").value.trim();
-
-if(name===""||phone===""){
-
-alert("Please enter your Name and Mobile Number.");
-
-return;
-
-}
-
-let text=
-
+    let text =
 `📋 *New Financial Consultation Request*
 
 👤 Name: ${name}
-
 📱 Mobile: ${phone}
-
 🎂 Age: ${age}
-
 💼 Occupation: ${occupation}
-
 💰 Monthly Income: ${income}
-
 📍 City: ${city}
 
 📌 Interested Service:
@@ -8378,19 +8354,13 @@ ${selectedService}
 📝 Requirement:
 ${message}`;
 
- const whatsappURL =
+    const whatsappURL =
         `https://wa.me/917008450300?text=${encodeURIComponent(text)}`;
 
     window.location.href = whatsappURL;
 }
-        alert(
-"✅ Your request has been submitted successfully.\n\nYou will receive a personalized financial plan along with a consultation call within 6 hours."
-);
 
-closeForm();
-
-}
-                    </script>
+</script>
             <script>
 
 const appointmentScriptURL = "YOUR_GOOGLE_APPS_SCRIPT_URL";
